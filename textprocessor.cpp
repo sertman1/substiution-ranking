@@ -1,5 +1,6 @@
 // This program takes a text file (written in the English alphabet)
-// and outputs the frequency of each 26 letters in the text.
+// and outputs the frequency of each 26 letters in the text as well
+// as hyphens, if they are used to form a word (e.g., one-year-old).
 // Additionally, it outputs the frequency of the words' lengths,
 // as well as the average word length. 
 // This program assumes that the words in the text are spelled correctly. 
@@ -36,7 +37,7 @@ int main() {
 			char c = input_buffer.at(i);
 			unsigned word_length = 0;
 
-			// TODO:: handle edge cases for words such as 'one-to-one,' 'let's,'
+			// TODO:: handle edge cases for words such as 'one-to-one,' 'let's,' 'dec. (??)'
 			while((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) { // ascii range for 'a-z' and 'A-Z'
 				
 				(char_frequencies[c])++;
@@ -47,10 +48,36 @@ int main() {
 				} else {
 					break;
 				}
-			}
+				
+				// check for words in the form 'one-to-one' etc.
+				// N.B.: hyphens are counted in the char frequency if they constitute a word
+				if (c == '-') {
+					if (i + 1 < input_buffer.length() && 
+						(input_buffer.at(i + 1) >= 65 && input_buffer.at(i + 1) <= 90) || 
+						(input_buffer.at(i + 1) >= 97 && input_buffer.at(i + 1) <= 122)) {
+
+						(char_frequencies[c])++; // it's a word --> increment hyphen count
+						word_length++;
+						c = input_buffer.at(i + 1);
+
+					}
+				}
+
+				// N.B.: words such as 'don't' are defined to be length 4
+				if (c == 39) { // TODO:: other types of potential apostrophes
+					if (i + 1 < input_buffer.length() &&
+                                                (input_buffer.at(i + 1) >= 65 && input_buffer.at(i + 1) <= 90) ||
+                                                (input_buffer.at(i + 1) >= 97 && input_buffer.at(i + 1) <= 122)) {
+                                        
+                                                c = input_buffer.at(i + 1);
+
+                                        } 
+
+				}
 
 			if (word_length != 0) {
 				(length_frequencies[word_length])++;
+			}
 			}
 
 		}
