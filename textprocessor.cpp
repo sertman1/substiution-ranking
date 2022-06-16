@@ -12,7 +12,7 @@
 #include <map>
 using std::map;
 
-void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies);
+void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, map<char, unsigned> &char_freq_no_capitalization);
 
 // N.B.: When executing the program, give it text through cin
 // e.g., './a.out < mytext.txt'
@@ -80,19 +80,27 @@ int main() {
 		}
 	}
 
+	map<char, unsigned> char_freq_no_capitalization_complex;
+	map<char, unsigned> char_freq_no_capitalization_simple;
+
 	printf("----------------COMPLEX DATA-----------------\n");
 	printf("RESULTS: \n");		
-	print_data(char_frequencies_complex, length_frequencies_complex);
+	print_data(char_frequencies_complex, length_frequencies_complex, char_freq_no_capitalization_complex);
 	printf("---------------------------------------------\n\n");
 	printf("----------------SIMPLE DATA------------------\n");
 	printf("RESULTS: \n");
-	print_data(char_frequencies_simple, length_frequencies_simple);
+	print_data(char_frequencies_simple, length_frequencies_simple, char_freq_no_capitalization_simple);
 	printf("---------------------------------------------\n");
+
+	for (map<char, unsigned>::iterator it = char_freq_no_capitalization_simple.begin(); it != char_freq_no_capitalization_simple.end(); it++)  {
+		std::cout << it->first << " " << it->second << std::endl;
+		printf("yes");
+	}
+
 	return 0;
 }
 
-void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies) {
-	map<char, unsigned> char_freq_no_capitalization;
+void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, map<char, unsigned> &char_freq_no_capitalization) {
 	unsigned total_chars;
 	
 	for (map<char, unsigned>::iterator it = char_frequencies.begin(); it != char_frequencies.end(); it++) {
