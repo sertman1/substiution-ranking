@@ -5,7 +5,7 @@
 // 'z'/'Z' appeared in words with an average length of 7.2
 //
 // To be added: counting of frequency of characters in words
-// e.g., when 'y'/'Y' was present, it appeared an average of 1.2 times
+// e.g., when 'y'/'Y' was present, it appeared an average of 1.2 time
 
 
 #include <iostream>
@@ -22,6 +22,8 @@ int main() {
 	bool simple_sentence = false;
 	unsigned word_length = 0;
 	char c;
+
+	// N.B. Program attemps to omit proper nouns from data collection
 	map<char, unsigned> char_frequencies_complex;
 	map<unsigned, unsigned> length_frequencies_complex;
 	map<char, unsigned> char_frequencies_simple;
@@ -58,10 +60,6 @@ int main() {
 				}
 			}
 
-			if (word_length > 40) {
-				std::cout << input_buffer << std::endl << "index: " << i << std::endl << "char: " << c << std::endl;
-			}
-
 			if (word_length != 0) {
 				if (simple_sentence) {
 					(length_frequencies_simple[word_length])++;
@@ -83,9 +81,13 @@ int main() {
 	}
 
 	printf("----------------COMPLEX DATA-----------------\n");
+	printf("RESULTS: \n");		
 	print_data(char_frequencies_complex, length_frequencies_complex);
+	printf("---------------------------------------------\n\n");
 	printf("----------------SIMPLE DATA------------------\n");
+	printf("RESULTS: \n");
 	print_data(char_frequencies_simple, length_frequencies_simple);
+	printf("---------------------------------------------\n");
 	return 0;
 }
 
@@ -93,7 +95,14 @@ void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> le
 	for (map<char, unsigned>::iterator it = char_frequencies.begin(); it != char_frequencies.end(); it++) {
 		std::cout << it->first << " " << it->second << std::endl;
 	}
+
+	int sum_of_lengths = 0;
+	int num_of_lengths = 0;
 	for (map<unsigned, unsigned>::iterator it = length_frequencies.begin(); it != length_frequencies.end(); it++) {
 		std::cout << it->first << " " << it->second << std::endl;
+		sum_of_lengths += it->first * it->second;
+		num_of_lengths += it->second;
 	}
+
+	std::cout << "\nAVERAGE WORD LENGTH: " << ((double) sum_of_lengths) / ((double) num_of_lengths) << std::endl;
 }
