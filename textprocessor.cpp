@@ -92,17 +92,33 @@ int main() {
 }
 
 void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies) {
+	map<char, unsigned> char_freq_no_capitalization;
+	unsigned total_chars;
+	
 	for (map<char, unsigned>::iterator it = char_frequencies.begin(); it != char_frequencies.end(); it++) {
-		std::cout << it->first << " " << it->second << std::endl;
+		std::cout << it->first << ": " << it->second << std::endl;
+
+		if (it->first >= 97 && it->first <= 122) {
+			char_freq_no_capitalization[it->first - 32] += it->second; // decapitalize the char
+		} else {
+			char_freq_no_capitalization[it->first] += it->second;
+		}
+
+		total_chars += it->second;
 	}
 
 	int sum_of_lengths = 0;
 	int num_of_lengths = 0;
 	for (map<unsigned, unsigned>::iterator it = length_frequencies.begin(); it != length_frequencies.end(); it++) {
-		std::cout << it->first << " " << it->second << std::endl;
+		std::cout << it->first << ": " << it->second << std::endl;
 		sum_of_lengths += it->first * it->second;
 		num_of_lengths += it->second;
 	}
 
 	std::cout << "\nAVERAGE WORD LENGTH: " << ((double) sum_of_lengths) / ((double) num_of_lengths) << std::endl;
+	std::cout << "CHARACTER AVERAGES: " << std::endl;
+
+	for (map<char, unsigned>::iterator it = char_freq_no_capitalization.begin(); it != char_freq_no_capitalization.end(); it++) {
+		std::cout << it->first << ": " << ((double)it->second) / ((double)total_chars)  << std::endl;
+	}
 }
