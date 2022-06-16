@@ -92,10 +92,7 @@ int main() {
 	print_data(char_frequencies_simple, length_frequencies_simple, char_freq_no_capitalization_simple);
 	printf("---------------------------------------------\n");
 
-	for (map<char, unsigned>::iterator it = char_freq_no_capitalization_simple.begin(); it != char_freq_no_capitalization_simple.end(); it++)  {
-		std::cout << it->first << " " << it->second << std::endl;
-		printf("yes");
-	}
+	// TODO:: COMPARE DATA
 
 	return 0;
 }
