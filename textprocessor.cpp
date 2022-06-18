@@ -98,10 +98,11 @@ int main() {
 }
 
 void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, map<char, unsigned> &char_freq_no_capitalization) {
-	unsigned total_chars;
-	
+	unsigned total_chars = 0;
+	int counter = 0; // used to space out the character data for an easier view	
+
 	for (map<char, unsigned>::iterator it = char_frequencies.begin(); it != char_frequencies.end(); it++) {
-		std::cout << it->first << ": " << it->second << std::endl;
+		std::cout << it->first << ": " << it->second << "  ";
 
 		if (it->first >= 97 && it->first <= 122) {
 			char_freq_no_capitalization[it->first - 32] += it->second; // decapitalize the char
@@ -110,14 +111,36 @@ void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> le
 		}
 
 		total_chars += it->second;
-	}
 
+		counter++;
+		if (counter > 6) {
+			std::cout << std::endl;
+			counter = 0;
+			it++;
+		} else if (it++ != char_frequencies.end()) {
+			std::cout << "|  "; 
+		}
+		it--;
+	
+	}
+	std::cout << std::endl;
+	std::cout << "LENGTH OCCURRENCES:" << std::endl;
 	int sum_of_lengths = 0;
 	int num_of_lengths = 0;
+	counter = 0; // reset spacing
 	for (map<unsigned, unsigned>::iterator it = length_frequencies.begin(); it != length_frequencies.end(); it++) {
-		std::cout << it->first << ": " << it->second << std::endl;
+		std::cout << it->first << ": " << it->second << "  " ;
 		sum_of_lengths += it->first * it->second;
 		num_of_lengths += it->second;
+		counter++;
+		if (counter > 4) {
+			std::cout << std::endl;
+			counter = 0;
+			it++;
+		} else if (it++ != length_frequencies.end()) {
+			std::cout << "|  ";
+		} 
+		it--;
 	}
 
 	std::cout << "\nAVERAGE WORD LENGTH: " << ((double) sum_of_lengths) / ((double) num_of_lengths) << std::endl;
