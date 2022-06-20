@@ -1,27 +1,20 @@
 // TODO:: program description
 
-// To be added: mapping characters' occurences to word length 
-// e.g., does 'x'/'X' appear more frequently in longer words?
-// 'z'/'Z' appeared in words with an average length of 7.2
-//
-// To be added: counting of frequency of characters in words
-// e.g., when 'y'/'Y' was present, it appeared an average of 1.2 time
-
-
 #include <iostream>
 #include <map>
 using std::map;
 
-void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, map<char, unsigned> &char_freq_no_capitalization);
+void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, 
+								map<char, unsigned> &char_freq_no_capitalization);
 
 // N.B.: When executing the program, give it text through cin
 // e.g., './a.out < mytext.txt'
 int main() {
 	
 	std::string input_buffer;
-	bool simple_sentence = false;
-	unsigned word_length = 0;
-	char c;
+	bool simple_sentence = false; // keeps track of which sentence computer is on when processing text
+	unsigned word_length = 0; // used to store each sentences word lenght
+	char c; // used to store the character's present in each sentence
 
 	// N.B. Program attemps to omit proper nouns from data collection
 	map<char, unsigned> char_frequencies_complex;
