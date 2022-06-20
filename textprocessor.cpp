@@ -4,10 +4,11 @@
 #include <map>
 using std::map;
 
-void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, 
-								map<char, unsigned> &char_freq_no_capitalization);
+void print_raw_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, 
+										map<char, unsigned> &char_freq_no_capitalization);
 
 // N.B.: When executing the program, give it text through cin
+// text should be in the format: <complex sentence\n> <simple sentence\n> <\n>
 // e.g., './a.out < mytext.txt'
 int main() {
 	
@@ -16,7 +17,7 @@ int main() {
 	unsigned word_length = 0; // used to store each sentences word lenght
 	char c; // used to store the character's present in each sentence
 
-	// N.B. Program attemps to omit proper nouns from data collection
+	// N.B. Program attemps to (naively) omit proper nouns from data collection
 	map<char, unsigned> char_frequencies_complex;
 	map<unsigned, unsigned> length_frequencies_complex;
 	map<char, unsigned> char_frequencies_simple;
@@ -78,19 +79,27 @@ int main() {
 
 	printf("----------------COMPLEX DATA-----------------\n");
 	printf("RESULTS: \n");		
-	print_data(char_frequencies_complex, length_frequencies_complex, char_freq_no_capitalization_complex);
+	print_raw_data(char_frequencies_complex, length_frequencies_complex, char_freq_no_capitalization_complex);
 	printf("---------------------------------------------\n\n");
 	printf("----------------SIMPLE DATA------------------\n");
 	printf("RESULTS: \n");
-	print_data(char_frequencies_simple, length_frequencies_simple, char_freq_no_capitalization_simple);
+	print_raw_data(char_frequencies_simple, length_frequencies_simple, char_freq_no_capitalization_simple);
 	printf("---------------------------------------------\n");
 
+	printf("COMPARING DATA:\n");
+	map<char, unsigned>:: iterator it1 = char_freq_no_capitalization_simple.begin();
+	for (map<char, unsigned>::iterator it2 = char_freq_no_capitalization_complex.begin();
+		 it1 != char_freq_no_capitalization_simple.end() && it2 != char_freq_no_capitalization_complex.end(); it1++, it2++) {
+
+			 std::cout << it1->first << "   " << it2->first << std::endl;
+
+		}
 	// TODO:: COMPARE DATA
 
 	return 0;
 }
 
-void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, map<char, unsigned> &char_freq_no_capitalization) {
+void print_raw_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, map<char, unsigned> &char_freq_no_capitalization) {
 	unsigned total_chars = 0;
 	int counter = 0; // used to space out the character data for an easier view	
 
@@ -140,6 +149,7 @@ void print_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> le
 	std::cout << "CHARACTER AVERAGES: " << std::endl;
 
 	for (map<char, unsigned>::iterator it = char_freq_no_capitalization.begin(); it != char_freq_no_capitalization.end(); it++) {
-		std::cout << it->first << ": " << ((double)it->second) / ((double)total_chars)  << std::endl;
+		std::cout << it->first << ": " << (((double)it->second) / ((double)total_chars)) * 100 << "%" << std::endl;
 	}
+
 }
