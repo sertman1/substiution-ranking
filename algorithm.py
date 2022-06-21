@@ -20,10 +20,6 @@ for row in tsvin2:
 
 
 def rankingmetric(target, candidate, context):
-    print(target)
-    print(candidate)
-    print(context)
-    print('\n')
 
     # word length
     # type of characters
