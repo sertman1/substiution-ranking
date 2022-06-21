@@ -5,7 +5,7 @@
 using std::map;
 
 void print_raw_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, 
-										map<char, unsigned> &char_freq_no_capitalization);
+										map<char, unsigned> &char_freq_no_capitalization, unsigned &total_chars);
 
 // N.B.: When executing the program, give it text through cin
 // text should be in the format: <complex sentence\n> <simple sentence\n> <\n>
@@ -76,31 +76,39 @@ int main() {
 
 	map<char, unsigned> char_freq_no_capitalization_complex;
 	map<char, unsigned> char_freq_no_capitalization_simple;
+	unsigned total_chars_simple = 0;
+	unsigned total_chars_complex = 0;
 
 	printf("----------------COMPLEX DATA-----------------\n");
 	printf("RESULTS: \n");		
-	print_raw_data(char_frequencies_complex, length_frequencies_complex, char_freq_no_capitalization_complex);
+	print_raw_data(char_frequencies_complex, length_frequencies_complex, char_freq_no_capitalization_complex, total_chars_complex);
 	printf("---------------------------------------------\n\n");
 	printf("----------------SIMPLE DATA------------------\n");
 	printf("RESULTS: \n");
-	print_raw_data(char_frequencies_simple, length_frequencies_simple, char_freq_no_capitalization_simple);
+	print_raw_data(char_frequencies_simple, length_frequencies_simple, char_freq_no_capitalization_simple, total_chars_simple);
 	printf("---------------------------------------------\n");
 
-	printf("COMPARING DATA:\n");
+	printf("COMPARING DATA:\nCOMPLEX   SIMPLE\n");
 	map<char, unsigned>:: iterator it1 = char_freq_no_capitalization_simple.begin();
 	for (map<char, unsigned>::iterator it2 = char_freq_no_capitalization_complex.begin();
 		 it1 != char_freq_no_capitalization_simple.end() && it2 != char_freq_no_capitalization_complex.end(); it1++, it2++) {
 
-			 std::cout << it1->first << "   " << it2->first << std::endl;
-
+			double simple_percentage = (((double)it1->second) / ((double)total_chars_simple));
+			double complex_percentage = (((double)it2->second) / ((double)total_chars_complex));
+			std::cout << it1->first << ": " << complex_percentage << "%  " << simple_percentage << "%  ";
+			if (simple_percentage > complex_percentage) {
+				std::cout << " Simple > by " << simple_percentage - complex_percentage << "%\n";
+			} else if (complex_percentage > simple_percentage) {
+				std::cout << " Complex > by " << complex_percentage - simple_percentage << "%\n";
+			} else {
+				std::cout << " Equal percentage of occurrences";
+			}
 		}
-	// TODO:: COMPARE DATA
 
 	return 0;
 }
 
-void print_raw_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, map<char, unsigned> &char_freq_no_capitalization) {
-	unsigned total_chars = 0;
+void print_raw_data(map<char, unsigned> char_frequencies, map<unsigned, unsigned> length_frequencies, map<char, unsigned> &char_freq_no_capitalization, unsigned &total_chars) {
 	int counter = 0; // used to space out the character data for an easier view	
 
 	for (map<char, unsigned>::iterator it = char_frequencies.begin(); it != char_frequencies.end(); it++) {
