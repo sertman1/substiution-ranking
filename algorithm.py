@@ -1,5 +1,7 @@
 import csv
+import requests
 
+dictionaryapi = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 sentencefile = '/home/hulatpc/Downloads/sentence_word.csv'
 candidatefile = '/home/hulatpc/Downloads/candidates.csv'
 
@@ -17,16 +19,23 @@ for row in tsvin:
 for row in tsvin2:
     candidatelist.append(row)
 
-
-
 def rankingmetric(target, candidate, context):
 
     # word length
     # type of characters
     # number of words in candidate
     # frequency in copora
+
     # number of meanings
-    # number of synnonyms (thesaurus)
+
+    numberofmeanings = 0;
+    dictionaryentry = requests.get(dictionaryapi + candidate)
+    for i in range(len(dictionaryentry.json()[0]['meanings'])):
+        numberofmeanings += len(dictionaryentry.json()[0]['meanings'][i]['definitions'])
+
+    # number of synnonyms (thesaurus), anytonyms
+    
+    
     # POS tag
 
     # CONTEXT
@@ -61,7 +70,7 @@ def algorithm(sentence, candidates):
 
 
 answer = ""
-for i in range(3):
+for i in range(1):
     answer += "Sentence " + str(i + 1) + " rankings: "
     answer += algorithm(sentencelist[i], candidatelist[i])
     if i + 1 != len(sentencelist):
