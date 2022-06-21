@@ -22,19 +22,28 @@ for row in tsvin2:
 def rankingmetric(target, candidate, context):
 
     # word length
+    wordlength = len(candidate)
+
     # type of characters
+
+
     # number of words in candidate
-    # frequency in copora
+    numberofwords = 1
+    for c in candidate:
+        if c == " ":
+            numberofwords += 1
+
+    # frequency in copora (consult multiple)
 
     # number of meanings
-
     numberofmeanings = 0;
     dictionaryentry = requests.get(dictionaryapi + candidate)
     for i in range(len(dictionaryentry.json()[0]['meanings'])):
         numberofmeanings += len(dictionaryentry.json()[0]['meanings'][i]['definitions'])
 
-    # number of synnonyms (thesaurus), anytonyms
+    # number of synnonyms
     
+    # number of antonyms
     
     # POS tag
 
