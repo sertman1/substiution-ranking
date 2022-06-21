@@ -3,7 +3,6 @@ import csv
 sentencefile = '/home/hulatpc/Downloads/sentence_word.csv'
 candidatefile = '/home/hulatpc/Downloads/candidates.csv'
 
-
 tsvin = open(sentencefile, "rt", encoding='utf-8')
 tsvin = csv.reader(tsvin, delimiter=';')
 sentencelist = list()
@@ -18,11 +17,13 @@ for row in tsvin:
 for row in tsvin2:
     candidatelist.append(row)
 
-answer = ""
 
-def algorithm(sentence, candidates):
-    print(sentence)
-    print(candidates)
+
+def rankingmetric(target, candidate, context):
+    print(target)
+    print(candidate)
+    print(context)
+    print('\n')
 
     # word length
     # type of characters
@@ -30,16 +31,45 @@ def algorithm(sentence, candidates):
     # frequency in copora
     # number of meanings
     # number of synnonyms (thesaurus)
+    # POS tag
 
     # CONTEXT
 
+    return 0
+
+def tokenizecandidates(candidates):
+    listofcandidates = list()
+    candidate = ""
+    for c in candidates[0]:
+        if c != ';' and c != '\n':
+            candidate += c
+        else:
+            listofcandidates.append(candidate)
+            candidate = ""
+    return listofcandidates
+
+
+def algorithm(sentence, candidates):
+    rankings = {}
+    context = sentence[0]
+    target = sentence[1]
+    candidates = tokenizecandidates(candidates)
+    for candidate in candidates:
+        rankings[candidate] = rankingmetric(target, candidate, context)
+
+    # SORT RANKING
     # PROPER FORMATING
+
     return "{}"
 
+
+
+answer = ""
 for i in range(3):
     answer += "Sentence " + str(i + 1) + " rankings: "
     answer += algorithm(sentencelist[i], candidatelist[i])
-    answer += "\n"
+    if i + 1 != len(sentencelist):
+        answer += "\n"
 
 answerfile = open("answer.txt", "w")
 answerfile.write(answer)
