@@ -141,11 +141,11 @@ Sentence 140 rankings: {position} {stand} {attitude} {stance}
 Sentence 141 rankings: {and} {with} {well} {along with} {in addition to}
 Sentence 142 rankings: {well} {much} {long} {sufficient} {in plenty of time}
 Sentence 143 rankings: {well} {nice} {properly} {satisfactorily}
-Sentence 144 rankings: {well} {including} {in addition to} {along with}
+Sentence 144 rankings: {well} {including} {along with} {in addition to}
 Sentence 145 rankings: {well} {successfully} {goodbye} {safely} {bon voyage} {excellently} {healthily} {good luck} {in good health}
 Sentence 146 rankings: {well} {nice} {carefully} {efficiently} {excellently}
 Sentence 147 rankings: {well} {then} {indeed}
-Sentence 148 rankings: {and} {well} {including} {in addition to} {along with}
+Sentence 148 rankings: {and} {well} {including} {along with} {in addition to}
 Sentence 149 rankings: {so} {well}
 Sentence 150 rankings: {so} {well}
 Sentence 151 rankings: {animal} {wild} {untamed animal}
@@ -204,14 +204,14 @@ Sentence 203 rankings: {forget} {fail} {neglect} {omit}
 Sentence 204 rankings: {forget} {let slip} {overlook} {cease to remember}
 Sentence 205 rankings: {forget} {fail} {omit} {overlook running} {overlook}
 Sentence 206 rankings: {remember} {forget} {overlook} {cease to remember} {fail to remember}
-Sentence 207 rankings: {lose} {forget} {disregard} {put out of mind} {overlook}
+Sentence 207 rankings: {lose} {forget} {disregard} {overlook} {put out of mind}
 Sentence 208 rankings: {forget} {not remember} {overlook}
 Sentence 209 rankings: {forget} {fail} {omit} {fail to remember}
 Sentence 210 rankings: {forget} {not recall} {not remember} {fail to remember} {omit to remember}
 Sentence 211 rankings: {gall} {pn} {secretion producing}
 Sentence 212 rankings: {pn} {gall}
 Sentence 213 rankings: {temerity} {audacity} {gall} {cheek} {nerve} {effrontery} {impudence}
-Sentence 214 rankings: {pn} {bile-producing} {gall}
+Sentence 214 rankings: {pn} {gall} {bile-producing}
 Sentence 215 rankings: {gall} {grub} {pustule} {abnormal growth}
 Sentence 216 rankings: {bile} {gall} {cheek} {rancor} {bitter spirit} {poison}
 Sentence 217 rankings: {cheek} {audacity} {nerve} {gall} {effrontery} {temerity}
@@ -221,7 +221,7 @@ Sentence 220 rankings: {nerve} {cheek} {audacity} {gall} {effrontery} {temerity}
 Sentence 221 rankings: {negative} {severe} {horrible} {dire} {horrific} {grim} {bleak} {doomy} {doom laden}
 Sentence 222 rankings: {terrible} {horrible} {unpleasant} {gruesome} {unrelenting} {horrific} {grim}
 Sentence 223 rankings: {terrible} {bleak} {grim} {morbid} {dire} {dismal} {depressing} {unpleasant}
-Sentence 224 rankings: {depressing} {harsh} {gloomy} {grim} {horrid} {bleak}
+Sentence 224 rankings: {harsh} {depressing} {gloomy} {grim} {horrid} {bleak}
 Sentence 225 rankings: {dark} {horrible} {unrelenting} {sinister} {dire} {grim} {ghastly} {horrific}
 Sentence 226 rankings: {awful} {horrid} {harsh} {unpleasant} {dismal} {grim} {depressing}
 Sentence 227 rankings: {difficult} {severe} {awful} {grim} {unrelenting} {harsh} {gloomy} {harrowing}
