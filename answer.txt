@@ -204,7 +204,7 @@ Sentence 203 rankings: {forget} {fail} {neglect} {omit}
 Sentence 204 rankings: {forget} {let slip} {overlook} {cease to remember}
 Sentence 205 rankings: {forget} {fail} {omit} {overlook running} {overlook}
 Sentence 206 rankings: {remember} {forget} {overlook} {cease to remember} {fail to remember}
-Sentence 207 rankings: {lose} {forget} {disregard} {overlook} {put out of mind}
+Sentence 207 rankings: {lose} {forget} {disregard} {overlook, put out of mind}
 Sentence 208 rankings: {forget} {not remember} {overlook}
 Sentence 209 rankings: {forget} {fail} {omit} {fail to remember}
 Sentence 210 rankings: {forget} {not recall} {not remember} {fail to remember} {omit to remember}

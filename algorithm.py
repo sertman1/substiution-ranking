@@ -43,7 +43,10 @@ def lengthmetric(candidate):
     #     complexity = wordlength - 7
         
     wordlength = len(candidate)
-    complexity = wordlength
+    if wordlength <= 2: # accounts for complicating technical terms, etc. 'x' 'pn'
+        complexity = wordlength + 4
+    else:
+        complexity = wordlength
     return complexity
 
 def frequencymetric(candidate):
@@ -92,7 +95,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.35166949743102394
+# HIGHEST: 0.3518569192354564
 
 def rankingmetric(target, candidate, context):
     complexity = 0 # 0 indicates the most simple word
@@ -189,7 +192,7 @@ def algorithm(sentence, candidates):
             lastvalue = v
             firstentry = False
             sortedanswers += k
-        elif v > lastvalue:
+        elif v > lastvalue + 0.1: # accounts for close ties
             sortedanswers += "} {" + k
         else:
             sortedanswers += ", " + k
