@@ -114,6 +114,19 @@ def rankingmetric(target, candidate, context):
 
     return complexity 
 
+def orderbyfrequency(candidates):
+    orderedlist = {}
+
+    for candidate in candidates:
+        if candidate in frequencylist:
+            orderedlist[candidate] = int(frequencylist[candidate][1])
+        else:
+            orderedlist[candidate] = 0
+
+    # sort by most present
+    orderedlist = {k: v for k, v in sorted(orderedlist.items(), key=lambda item: item[1], reverse=1)}
+    return orderedlist
+
 def tokenizecandidates(candidates):
     listofcandidates = list()
     candidate = ""
@@ -126,14 +139,21 @@ def tokenizecandidates(candidates):
     listofcandidates.append(candidate)
     return listofcandidates
 
+def adjustrankingbyfreq(rankings, candidatesorderedbyfreq):
+
+    return rankings
 
 def algorithm(sentence, candidates):
     rankings = {}
     context = sentence[0]
     target = sentence[1]
     candidates = tokenizecandidates(candidates)
+    candidatesorderedbyfreq = orderbyfrequency(candidates)
+
     for candidate in candidates:
         rankings[candidate] = rankingmetric(target, candidate, context)
+
+    rankings = adjustrankingbyfreq(rankings, candidatesorderedbyfreq)
 
     # sort rankings
     rankings = {k: v for k, v in sorted(rankings.items(), key=lambda item: item[1])}
@@ -142,6 +162,7 @@ def algorithm(sentence, candidates):
     firstentry = True
     lastvalue = 0
     sortedanswers = "{"
+
     for k, v in rankings.items():
         if firstentry:
             lastvalue = v
