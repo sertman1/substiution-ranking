@@ -4,6 +4,7 @@ import requests
 dictionaryapi = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 # sentencefile =  '/Users/sammy/Desktop/substiution-ranking/sentence_word.csv'
 # candidatefile = '/Users/sammy/Desktop/substiution-ranking/candidates.csv'
+
 sentencefile = '/home/hulatpc/Downloads/sentence_word.csv'
 candidatefile = '/home/hulatpc/Downloads/candidates.csv'
 frequencyfile = '/home/hulatpc/Downloads/FrencuenciasEN.csv'
@@ -89,33 +90,26 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
+# HIGHEST: 0.28383137252198815
+
 def rankingmetric(target, candidate, context):
     complexity = 0 # 0 indicates the most simple word
-
-    # word length
-    complexity += lengthmetric(candidate)
-
-    # type of characters
-
-    # number of words in candidate
     numberofwords = 1
     for c in candidate:
         if c == " ":
             numberofwords += 1
-    complexity += numberofwords
 
-    # frequency in copora (consult multiple)
+    # type of characters
+
+    complexity += 0.85 * lengthmetric(candidate)
+   #  complexity += 0.20 * numberofwords
     complexity += frequencymetric(candidate)
 
     # number of meanings
-    complexity += numberofsensesmetric(candidate, numberofwords)
-
+    # complexity += numberofsensesmetric(candidate, numberofwords)
     # number of synnonyms
-    
     # number of antonyms
-    
     # POS tag
-
     # CONTEXT
 
     return complexity 
@@ -129,6 +123,7 @@ def tokenizecandidates(candidates):
         else:
             listofcandidates.append(candidate)
             candidate = ""
+    listofcandidates.append(candidate)
     return listofcandidates
 
 
