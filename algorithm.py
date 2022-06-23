@@ -2,8 +2,10 @@ import csv
 import requests
 
 dictionaryapi = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-sentencefile = '/home/hulatpc/Downloads/sentence_word.csv'
-candidatefile = '/home/hulatpc/Downloads/candidates.csv'
+sentencefile =  '/Users/sammy/Desktop/substiution-ranking/sentence_word.csv'
+candidatefile = '/Users/sammy/Desktop/substiution-ranking/candidates.csv'
+# sentencefile = '/home/hulatpc/Downloads/sentence_word.csv'
+# candidatefile = '/home/hulatpc/Downloads/candidates.csv'
 
 tsvin = open(sentencefile, "rt", encoding='utf-8')
 tsvin = csv.reader(tsvin, delimiter=';')
@@ -20,6 +22,7 @@ for row in tsvin2:
     candidatelist.append(row)
 
 def rankingmetric(target, candidate, context):
+    complexity = 0; # 0 indicates the most simple word
 
     # word length
     wordlength = len(candidate)
@@ -38,8 +41,36 @@ def rankingmetric(target, candidate, context):
     # number of meanings
     numberofmeanings = 0;
     dictionaryentry = requests.get(dictionaryapi + candidate)
-    for i in range(len(dictionaryentry.json()[0]['meanings'])):
-        numberofmeanings += len(dictionaryentry.json()[0]['meanings'][i]['definitions'])
+    if dictionaryentry.status_code == 200:
+        for i in range(len(dictionaryentry.json()[0]['meanings'])):
+            numberofmeanings += len(dictionaryentry.json()[0]['meanings'][i]['definitions'])
+        if numberofmeanings >= 4 and numberofmeanings <= 5:
+            complexity += 1
+        elif numberofmeanings >= 6 and numberofmeanings <= 7:
+            complexity += 2
+        elif numberofmeanings >= 8 and numberofmeanings <= 9:
+            complexity += 3
+        elif numberofmeanings >= 10 and numberofmeanings <= 12:
+            complexity += 4
+        elif numberofmeanings >= 13 and numberofmeanings <= 16:
+            complexity += 5
+        elif numberofmeanings >= 17 and numberofmeanings <= 20:
+            complexity += 6
+        elif numberofmeanings >= 21 and numberofmeanings <= 23:
+            complexity += 7
+        elif numberofmeanings >= 24 and numberofmeanings <= 27:
+            complexity += 8
+        elif numberofmeanings >= 28 and numberofmeanings <= 30:
+            complexity += 9
+        elif numberofmeanings >= 31:
+            complexity += 10
+    else:
+        # TODO: handle case where not in dictionary
+        if numberofwords == 1:
+            complexity += 3
+        else:
+            complexity += 2
+        print("Not in dictionary API: " + candidate)
 
     # number of synnonyms
     
@@ -49,7 +80,7 @@ def rankingmetric(target, candidate, context):
 
     # CONTEXT
 
-    return 0
+    return complexity 
 
 def tokenizecandidates(candidates):
     listofcandidates = list()
@@ -71,15 +102,20 @@ def algorithm(sentence, candidates):
     for candidate in candidates:
         rankings[candidate] = rankingmetric(target, candidate, context)
 
-    # SORT RANKING
-    # PROPER FORMATING
+    # SORT RANKINGS
+    rankings = {k: v for k, v in sorted(rankings.items(), key=lambda item: item[1])}
 
-    return "{}"
+    # PROPER FORMATING
+    sortedanswers = ""
+    for ranking in rankings:
+        sortedanswers += "{" + ranking + "} "
+    # HANDLE DUPLICATES
+    return sortedanswers
 
 
 
 answer = ""
-for i in range(1):
+for i in range(len(sentencelist)):
     answer += "Sentence " + str(i + 1) + " rankings: "
     answer += algorithm(sentencelist[i], candidatelist[i])
     if i + 1 != len(sentencelist):
