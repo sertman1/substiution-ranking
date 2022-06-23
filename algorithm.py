@@ -49,7 +49,7 @@ def frequencymetric(candidate):
     if candidate in frequencylist:
         complexity = (int((frequencylist[candidate][0])) / 1000)
     else:
-        complexity = 5
+        complexity = 9
 
     return complexity
 
@@ -90,7 +90,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.28383137252198815
+# HIGHEST: 0.31115274061571097
 
 def rankingmetric(target, candidate, context):
     complexity = 0 # 0 indicates the most simple word
@@ -140,6 +140,8 @@ def tokenizecandidates(candidates):
     return listofcandidates
 
 def adjustrankingbyfreq(rankings, candidatesorderedbyfreq):
+    for k, v in rankings.items():
+        rankings[k] = v + 1
 
     return rankings
 
