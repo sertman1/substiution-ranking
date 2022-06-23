@@ -31,18 +31,19 @@ for row in tsvin3:
     frequencylist[row[1]] = (row[0], row[2]) # relative rank, raw frequency pair
 
 def lengthmetric(candidate):
-    complexity = 0
+    # complexity = 0
+    # wordlength = len(candidate)
+    # if wordlength >= 5 and wordlength <= 6:
+    #     complexity = 1
+    # elif wordlength >= 7 and wordlength <= 8:
+    #     complexity = 2
+    # elif wordlength >= 9 and wordlength <= 10:
+    #     complexity = 3
+    # else:
+    #     complexity = wordlength - 7
+        
     wordlength = len(candidate)
-    if wordlength >= 5 and wordlength <= 6:
-        complexity = 1
-    elif wordlength >= 7 and wordlength <= 8:
-        complexity = 2
-    elif wordlength >= 9 and wordlength <= 10:
-        complexity = 3
-    else:
-        complexity = wordlength - 7
-
-    return complexity
+    return wordlength
 
 def frequencymetric(candidate):
     complexity = 0
@@ -90,7 +91,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.31116066515933016097
+# HIGHEST: 0.3179244407314583
 
 def rankingmetric(target, candidate, context):
     complexity = 0 # 0 indicates the most simple word
