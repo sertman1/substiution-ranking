@@ -1,4 +1,5 @@
 import csv
+from pickle import FALSE
 import requests
 
 dictionaryapi = "https://api.dictionaryapi.dev/api/v2/entries/en/"
@@ -43,7 +44,8 @@ def lengthmetric(candidate):
     #     complexity = wordlength - 7
         
     wordlength = len(candidate)
-    return wordlength
+    complexity = wordlength
+    return complexity
 
 def frequencymetric(candidate):
     complexity = 0
@@ -91,7 +93,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.3179244407314583
+# HIGHEST: 0.3331479665585787
 
 def rankingmetric(target, candidate, context):
     complexity = 0 # 0 indicates the most simple word
@@ -142,9 +144,14 @@ def tokenizecandidates(candidates):
     return listofcandidates
 
 def adjustrankingbyfreq(rankings, candidatesorderedbyfreq):
+    reachedendties = FALSE # used to recognize if we've reached the end of list with no frequency such that ties are valued equally
     for k, v in rankings.items():
-        rankings[k] = v + 1
-
+        i = 0
+        for k2 in candidatesorderedbyfreq:
+            if k2 == k:
+                rankings[k] = v + i
+                break
+            i += 1
     return rankings
 
 def algorithm(sentence, candidates):
@@ -154,9 +161,9 @@ def algorithm(sentence, candidates):
     candidates = tokenizecandidates(candidates)
     candidatesorderedbyfreq = orderbyfrequency(candidates)
 
+    # perform metric 
     for candidate in candidates:
         rankings[candidate] = rankingmetric(target, candidate, context)
-
     rankings = adjustrankingbyfreq(rankings, candidatesorderedbyfreq)
 
     # sort rankings
@@ -166,7 +173,6 @@ def algorithm(sentence, candidates):
     firstentry = True
     lastvalue = 0
     sortedanswers = "{"
-
     for k, v in rankings.items():
         if firstentry:
             lastvalue = v
