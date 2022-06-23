@@ -90,7 +90,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.31115274061571097
+# HIGHEST: 0.31116066515933016097
 
 def rankingmetric(target, candidate, context):
     complexity = 0 # 0 indicates the most simple word
@@ -101,8 +101,9 @@ def rankingmetric(target, candidate, context):
 
     # type of characters
 
+    ## DECIMALS ARE DICEY. NEED TO NORMALIZE FOR TIES??
     complexity += 0.85 * lengthmetric(candidate)
-   #  complexity += 0.20 * numberofwords
+    complexity += 0.7 * numberofwords
     complexity += frequencymetric(candidate)
 
     # number of meanings
