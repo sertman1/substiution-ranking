@@ -3,12 +3,20 @@ import csv
 
 word_frequencies = {"" : 0}
 
+def write_to_csv(dict):
+    # sort frequencies from highest to lowest
+    dict = {k: v for k, v in sorted(dict.items(), key=lambda item: item[1], reverse=True)}
+
+    with open('wikifrequencies.csv', 'w') as file:
+        for key in dict.keys():
+            file.write("%s, %s\n" % (key, dict[key]))
+
 def process_article(article):
     current_word = ""
     currently_processing_paragraph = True # text file starts out immediatley on paragraph 1
     reached_end = False
     i = 0
-    # TODO:: a few edge cases, like 'PTSD', ought to be handled ********************************
+    # TODO:: a few edge cases, like 'PTSD' and '1', ought to be handled ********************************
     while i < len(article) and not reached_end:
         if not currently_processing_paragraph: 
             while article[i] == '\n':
@@ -49,11 +57,8 @@ def process_article(article):
     return 0
 
 wiki_articles = load_dataset("wikipedia", "20220301.en", split="train")
-process_article(wiki_articles[1]['text'])
+for i in range(6458670): # number of EN articles in the provided dataset
+    process_article(wiki_articles[i]['text'])
 
-# for i in range(6458670): # number of EN articles in the provided dataset
-
-with open('wikifrequencies.csv', 'w') as file:
-    for key in word_frequencies.keys():
-        file.write("%s, %s\n" % (key, word_frequencies[key]))
+write_to_csv(word_frequencies)
     
