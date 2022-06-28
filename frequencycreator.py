@@ -6,17 +6,30 @@ def add_word_to_dict(word):
 
 def process_article(article):
     current_word = ""
-    num_words = 0
     currently_processing_paragraph = True # text file starts out immediatley on paragraph 1
+    reached_end = False
+    i = 0
     # TODO:: a few edge cases, like 'PTSD', ought to be handled
-    for i in range(len(article)):
+    while i < len(article) and not reached_end:
+        if not currently_processing_paragraph: 
+            while article[i] == '\n':
+                i += 1
+            j = i # temp var to check if loop is currently in a header, and if so, skip over the header's words
+            on_sentence = False
+            while not article[j] == '\n' and j + 1 < len(article):
+                if article[j] == '.': # headers don't contain periods --> if we find one, go back to original index i
+                    on_sentence = True
+                    break
+                j += 1
+            if not on_sentence:
+                i = j # skip over header
+
         if (article[i] == ' ' or article[i] == '.' or article[i] == ',' or article[i] == '"' or article[i] == ';' or article[i] == ':' or article[i] == '—' or 
             article[i] == '\t' or article[i] == '(' or article[i] == ')' or article[i] == '[' or article[i] == ']'): # indicates loop is no longer processing a word
             
             if not current_word == "":
                 add_word_to_dict(current_word)
-                num_words += 1
-
+                word_count += 1
             current_word = ""
 
         elif article[i] == '\n':
@@ -30,14 +43,13 @@ def process_article(article):
             if  (current_word == "See also" or current_word == "Notes" or current_word == "External links" or current_word == "Bibliography" or
                     current_word == "References" or current_word == "citations"  or current_word == "Sources" or current_word == "Primary sources" or
                         current_word == "Secondary sources" or current_word == "Tertiary sources" or current_word == "Further reading"): # indicates end of the article
-                            break
+                            reached_end = True
         i += 1
-    print(num_words)
+
+    print(word_count)
     return 0
 
 wiki_articles = load_dataset("wikipedia", "20220301.en", split="train")
 process_article(wiki_articles[1]['text'])
-
-# See also, Notes, External links, Bibliography, References, citations, Sources, Primary sources, Secondary sources, Tertiary sources, Further reading 
 
 # for i in range(6458670): # number of EN articles in the provided dataset
