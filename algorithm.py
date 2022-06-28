@@ -96,6 +96,7 @@ def numberofsensesmetric(candidate, numberofwords):
     return complexity
 
 # HIGHEST: 0.3518569192354564
+# CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
     complexity = 0 # 0 indicates the most simple word
@@ -111,7 +112,7 @@ def rankingmetric(target, candidate, context):
     complexity += 0.7 * numberofwords
     if numberofwords >= 3:
         complexity += 1
-    complexity += frequencymetric(candidate)
+    complexity += 1 * frequencymetric(candidate)
 
     # number of meanings
     # complexity += numberofsensesmetric(candidate, numberofwords)
@@ -183,7 +184,7 @@ def algorithm(sentence, candidates):
     rankings = {k: v for k, v in sorted(rankings.items(), key=lambda item: item[1])}
 
     # proper formating
-    # TODO:: create 'tie' range *************************************************************
+    # TODO:: create 'tie' range *********************************************************************
     firstentry = True
     lastvalue = 0
     sortedanswers = "{"
@@ -192,7 +193,7 @@ def algorithm(sentence, candidates):
             lastvalue = v
             firstentry = False
             sortedanswers += k
-        elif v > lastvalue + 0.1: # accounts for close ties
+        elif v > lastvalue + 0.5: # accounts for close ties
             sortedanswers += "} {" + k
         else:
             sortedanswers += ", " + k
