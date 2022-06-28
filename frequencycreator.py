@@ -1,15 +1,14 @@
 from datasets import load_dataset
+import csv
 
-def add_word_to_dict(word):
-
-    return 0
+word_frequencies = {"" : 0}
 
 def process_article(article):
     current_word = ""
     currently_processing_paragraph = True # text file starts out immediatley on paragraph 1
     reached_end = False
     i = 0
-    # TODO:: a few edge cases, like 'PTSD', ought to be handled
+    # TODO:: a few edge cases, like 'PTSD', ought to be handled ********************************
     while i < len(article) and not reached_end:
         if not currently_processing_paragraph: 
             while article[i] == '\n':
@@ -27,9 +26,11 @@ def process_article(article):
         if (article[i] == ' ' or article[i] == '.' or article[i] == ',' or article[i] == '"' or article[i] == ';' or article[i] == ':' or article[i] == '—' or 
             article[i] == '\t' or article[i] == '(' or article[i] == ')' or article[i] == '[' or article[i] == ']'): # indicates loop is no longer processing a word
             
-            if not current_word == "":
-                add_word_to_dict(current_word)
-                word_count += 1
+            if not current_word == "" or not len(current_word) == 0:
+                if current_word.lower() in word_frequencies:
+                    word_frequencies[current_word.lower()] += 1
+                else:
+                    word_frequencies[current_word.lower()] = 1
             current_word = ""
 
         elif article[i] == '\n':
@@ -45,11 +46,14 @@ def process_article(article):
                         current_word == "Secondary sources" or current_word == "Tertiary sources" or current_word == "Further reading"): # indicates end of the article
                             reached_end = True
         i += 1
-
-    print(word_count)
     return 0
 
 wiki_articles = load_dataset("wikipedia", "20220301.en", split="train")
 process_article(wiki_articles[1]['text'])
 
 # for i in range(6458670): # number of EN articles in the provided dataset
+
+with open('wikifrequencies.csv', 'w') as file:
+    for key in word_frequencies.keys():
+        file.write("%s, %s\n" % (key, word_frequencies[key]))
+    
