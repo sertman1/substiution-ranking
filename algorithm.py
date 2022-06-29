@@ -3,13 +3,13 @@ import requests
 
 dictionaryapi = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 
-sentencefile = 'sentence_word.csv'
-candidatefile = 'candidates.csv'
-frequencyfile = 'FrencuenciasEN.csv'
-wikifrequencyfiles = 'wikifrequencies.csv'
+sentencefile = './assets/sentence_word.csv'
+candidatefile = './assets/candidates.csv'
+frequencyfile = './assets/FrencuenciasEN.csv'
+wikifrequencyfiles = 'wikifrequencies.csv' # TODO: REFACTOR
 
 frequencylist = {}
-wikifrequencylist = {}
+wiki_frequency_list = {}
 
 def lengthmetric(candidate):
     # complexity = 0
@@ -32,6 +32,8 @@ def lengthmetric(candidate):
 
 # take into account POS/plurals etc?
 # how to handle multiword scenarios
+# take into account raw frequency
+# SIMPLE WIKI VS REGULAR???
 def frequencymetric(candidate):
     complexity = 0
     if candidate in frequencylist:
@@ -39,7 +41,51 @@ def frequencymetric(candidate):
     else:
         complexity = 9
 
-    return complexity
+    complexity2 = 0
+    if candidate in wiki_frequency_list:
+        raw_frequency = wiki_frequency_list[candidate]
+        if raw_frequency < 10:
+            complexity2 = 9.5
+        elif raw_frequency < 20:
+            complexity2 = 9
+        elif raw_frequency < 40:
+            complexity2 = 8.5
+        elif raw_frequency < 80:
+            complexity2 = 8
+        elif raw_frequency < 120:
+            complexity2 = 7.5
+        elif raw_frequency < 200:
+            complexity2 = 7
+        elif raw_frequency < 300:
+            complexity2 = 6.5
+        elif raw_frequency < 450:
+            complexity2 = 6
+        elif raw_frequency < 700:
+            complexity2 = 5.5
+        elif raw_frequency < 950:
+            complexity2 = 5
+        elif raw_frequency < 1300:
+            complexity2 = 4.5
+        elif raw_frequency < 1700:
+            complexity2 = 4
+        elif raw_frequency < 2500:
+            complexity2 = 3.5
+        elif raw_frequency < 4000:
+            complexity2 = 3
+        elif raw_frequency < 6000:
+            complexity2 = 2.5
+        elif raw_frequency < 8500:
+            complexity2 = 2
+        elif raw_frequency < 12000:
+            complexity2 = 1.5
+        elif raw_frequency < 17000:
+            complexity2 = 1
+        elif raw_frequency < 25000:
+            complexity2 = 0.5
+    else:
+        complexity2 = 10
+
+    return complexity + 2 * complexity2
 
 def numberofsensesmetric(candidate, numberofwords):
     complexity = 0
@@ -78,7 +124,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.3518569192354564
+# HIGHEST: 0.3535346701252223
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
@@ -188,20 +234,21 @@ def algorithm(sentence, candidates):
 def retrieve_data_from_files(sentence_list, candidate_list):
     tsvin = open(sentencefile, "rt", encoding='utf-8')
     tsvin = csv.reader(tsvin, delimiter=';')
-
     tsvin2 = open(candidatefile, "rt", encoding='utf-8')   
     tsvin2 = csv.reader(tsvin2, delimiter='\t')
     tsvin3 = open(frequencyfile, "rt", encoding='utf-8')
     tsvin3 = csv.reader(tsvin3, delimiter=';')
+    tsvin4 = open('wikifrequencies.csv', "rt", encoding='utf-8')
+    tsvin4 = csv.reader(tsvin4, delimiter=',')
 
     for row in tsvin:
         sentence_list.append(row)
-
     for row in tsvin2:
         candidate_list.append(row)
-
     for row in tsvin3:
         frequencylist[row[1]] = (row[0], row[2]) # relative rank, raw frequency pair
+    for row in tsvin4:
+        wiki_frequency_list[row[0]] = (int)(row[1])
 
 def main():
     sentence_list = list()
