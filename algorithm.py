@@ -124,7 +124,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.3535346701252223
+# HIGHEST: 0.35911920063560177
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
