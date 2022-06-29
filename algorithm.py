@@ -130,10 +130,18 @@ def numberofsensesmetric(candidate, numberofwords):
 
 def char_metric(candidate):
     complexity = 0
-    
+    for c in candidate:
+        if c == '-':
+            complexity += 1
+        # elif c == 'x':
+        #     complexity += 0.5
+        # elif c == 'y':
+        #     complexity += 0.5
+        # elif c == 'z':
+        #     complexity += 1
     return complexity
 
-# HIGHEST: 0.3801154152167871
+# HIGHEST: 0.38211780324292194
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
@@ -143,9 +151,8 @@ def rankingmetric(target, candidate, context):
         if c == " ":
             numberofwords += 1
 
-    # type of characters (-, x, c, z, etc..?)
-
     ## DECIMALS ARE DICEY. NEED TO NORMALIZE FOR TIES??
+    complexity += 0.5 * char_metric(candidate)
     complexity += 0.85 * lengthmetric(candidate, has_multiple_words=numberofwords > 1)
     complexity += 0.7 * numberofwords
     if numberofwords >= 3:

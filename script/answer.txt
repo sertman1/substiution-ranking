@@ -51,7 +51,7 @@ Sentence 50 rankings: {bar} {block} {prevent} {exclude} {obstruct}
 Sentence 51 rankings: {cross} {crucifix}
 Sentence 52 rankings: {cross} {x shape} {two intersecting lines} {crucifix}
 Sentence 53 rankings: {x} {cross} {two intersecting lines} {crucifix}
-Sentence 54 rankings: {cross} {hybrid of} {hybrid} {mixture of}
+Sentence 54 rankings: {cross} {hybrid} {hybrid of} {mixture of}
 Sentence 55 rankings: {cross} {crucifix}
 Sentence 56 rankings: {cross} {crucifix}
 Sentence 57 rankings: {cross} {crucifix}
@@ -168,7 +168,7 @@ Sentence 167 rankings: {can} {tin} {container}
 Sentence 168 rankings: {can} {bin} {container}
 Sentence 169 rankings: {can} {tin}
 Sentence 170 rankings: {can} {tin}
-Sentence 171 rankings: {night} {dark} {shadow} {darkness} {gloom} {shade} {lack of light}
+Sentence 171 rankings: {night} {dark} {shadow} {darkness} {shade} {gloom} {lack of light}
 Sentence 172 rankings: {night} {dark} {uninformed} {oblivion} {ignorance}
 Sentence 173 rankings: {dark} {uncertain} {ignorant} {unclear} {oblivious} {unaware} {unsure} {uninformed, unilluminated}
 Sentence 174 rankings: {dark} {secret} {shadow} {darkness} {shade} {away from light}
@@ -284,7 +284,7 @@ Sentence 283 rankings: {rough} {uneven} {coarse} {jagged} {unfinished}
 Sentence 284 rankings: {rough} {approximate} {inexact} {rudimentary}
 Sentence 285 rankings: {rough} {inexact} {approximate} {rudimentary}
 Sentence 286 rankings: {simple} {rough} {approximate} {inexact}
-Sentence 287 rankings: {hard} {difficult} {tough} {rough} {hard time} {demanding} {harsh}
+Sentence 287 rankings: {hard} {difficult} {tough} {rough} {demanding} {hard time} {harsh}
 Sentence 288 rankings: {basic} {rough} {not smooth} {crude} {unfinished} {irregular} {rudimentary}
 Sentence 289 rankings: {poor} {dangerous} {violent} {rough} {uncivil} {disorderly} {unrefined} {raucous}
 Sentence 290 rankings: {difficult} {tough} {rough} {rudimentary} {unpleasant} {imperfect}
