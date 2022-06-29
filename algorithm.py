@@ -155,7 +155,7 @@ def char_metric(candidate):
         #     complexity += 1
     return complexity
 
-# HIGHEST: 0.38653330327001045
+# HIGHEST: 0.3869657055375139
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):

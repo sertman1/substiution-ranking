@@ -75,12 +75,11 @@ def main():
     while i < 6458670: # number of EN articles in the provided dataset
         process_article(wiki_articles[i]['text'])
 
-        if i % 100 == 0: # every 100 articles, record which one the program is on to avoid repetitive processing and write updated frequencies to csv
+        if i % 1000 == 0: # every 1000 articles, record which one the program is on to avoid repetitive processing and write updated frequencies to csv
             with open('curr_article_index', 'w') as f:
                 f.write(str(i))
             write_to_csv(word_frequencies)
         i += 1
-        print(i)
     
     write_to_csv(word_frequencies)
     
