@@ -3,6 +3,12 @@ import csv
 
 word_frequencies = {"" : 0}
 
+def get_existing_frequencies():
+    tsvin = open('wikifrequencies.csv', "rt", encoding='utf-8')
+    tsvin = csv.reader(tsvin, delimiter=',')
+    for row in tsvin:
+        word_frequencies[row[0]] = (int)(row[1])
+
 def write_to_csv(dict):
     # sort frequencies from highest to lowest
     dict = {k: v for k, v in sorted(dict.items(), key=lambda item: item[1], reverse=True)}
@@ -19,7 +25,7 @@ def process_article(article):
     # TODO:: a few edge cases, like 'PTSD' and '1', ought to be handled ********************************
     while i < len(article) and not reached_end:
         if not currently_processing_paragraph: 
-            while article[i] == '\n':
+            while article[i] == '\n' and i + 1 < len(article):
                 i += 1
             j = i # temp var to check if loop is currently in a header, and if so, skip over the header's words
             on_sentence = False
@@ -56,9 +62,25 @@ def process_article(article):
         i += 1
     return 0
 
-wiki_articles = load_dataset("wikipedia", "20220301.en", split="train")
-for i in range(6458670): # number of EN articles in the provided dataset
-    process_article(wiki_articles[i]['text'])
+def main():
+    get_existing_frequencies()
 
-write_to_csv(word_frequencies)
+    wiki_articles = load_dataset("wikipedia", "20220301.en", split="train")
+
+    with open('curr_article_index', 'r') as f:
+        i = int(f.read()) # start loop where program last left off
+
+    while i < 6458670: # number of EN articles in the provided dataset
+        process_article(wiki_articles[i]['text'])
+
+        if i % 100 == 0: # every 100 articles, record which one the program is on to avoid repetitive processing and write updated frequencies to csv
+            with open('curr_article_index', 'w') as f:
+                f.write(str(i))
+            write_to_csv(word_frequencies)
+        i += 1
+        print(i)
     
+    write_to_csv(word_frequencies)
+    
+if __name__ == '__main__':
+    main()

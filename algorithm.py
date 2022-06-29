@@ -2,33 +2,14 @@ import csv
 import requests
 
 dictionaryapi = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-# sentencefile =  '/Users/sammy/Desktop/substiution-ranking/sentence_word.csv'
-# candidatefile = '/Users/sammy/Desktop/substiution-ranking/candidates.csv'
 
-sentencefile = '/home/hulatpc/Downloads/sentence_word.csv'
-candidatefile = '/home/hulatpc/Downloads/candidates.csv'
-frequencyfile = '/home/hulatpc/Downloads/FrencuenciasEN.csv'
+sentencefile = 'sentence_word.csv'
+candidatefile = 'candidates.csv'
+frequencyfile = 'FrencuenciasEN.csv'
+wikifrequencyfiles = 'wikifrequencies.csv'
 
-tsvin = open(sentencefile, "rt", encoding='utf-8')
-tsvin = csv.reader(tsvin, delimiter=';')
-sentencelist = list()
-
-tsvin2 = open(candidatefile, "rt", encoding='utf-8')   
-tsvin2 = csv.reader(tsvin2, delimiter='\t')
-candidatelist = list()
-
-tsvin3 = open(frequencyfile, "rt", encoding='utf-8')
-tsvin3 = csv.reader(tsvin3, delimiter=';')
 frequencylist = {}
-
-for row in tsvin:
-    sentencelist.append(row)
-
-for row in tsvin2:
-    candidatelist.append(row)
-
-for row in tsvin3:
-    frequencylist[row[1]] = (row[0], row[2]) # relative rank, raw frequency pair
+wikifrequencylist = {}
 
 def lengthmetric(candidate):
     # complexity = 0
@@ -49,6 +30,8 @@ def lengthmetric(candidate):
         complexity = wordlength
     return complexity
 
+# take into account POS/plurals etc?
+# how to handle multiword scenarios
 def frequencymetric(candidate):
     complexity = 0
     if candidate in frequencylist:
@@ -193,7 +176,7 @@ def algorithm(sentence, candidates):
             lastvalue = v
             firstentry = False
             sortedanswers += k
-        elif v > lastvalue + 0.5: # accounts for close ties
+        elif v > lastvalue + 0.1: # accounts for close ties
             sortedanswers += "} {" + k
         else:
             sortedanswers += ", " + k
@@ -202,15 +185,39 @@ def algorithm(sentence, candidates):
     
     return sortedanswers
 
+def retrieve_data_from_files(sentence_list, candidate_list):
+    tsvin = open(sentencefile, "rt", encoding='utf-8')
+    tsvin = csv.reader(tsvin, delimiter=';')
 
+    tsvin2 = open(candidatefile, "rt", encoding='utf-8')   
+    tsvin2 = csv.reader(tsvin2, delimiter='\t')
+    tsvin3 = open(frequencyfile, "rt", encoding='utf-8')
+    tsvin3 = csv.reader(tsvin3, delimiter=';')
 
-answer = ""
-for i in range(len(sentencelist)):
-    answer += "Sentence " + str(i + 1) + " rankings: "
-    answer += algorithm(sentencelist[i], candidatelist[i])
-    if i + 1 != len(sentencelist):
-        answer += "\n"
+    for row in tsvin:
+        sentence_list.append(row)
 
-answerfile = open("answer.txt", "w")
-answerfile.write(answer)
-answerfile.close()
+    for row in tsvin2:
+        candidate_list.append(row)
+
+    for row in tsvin3:
+        frequencylist[row[1]] = (row[0], row[2]) # relative rank, raw frequency pair
+
+def main():
+    sentence_list = list()
+    candidate_list = list()
+    retrieve_data_from_files(sentence_list, candidate_list)
+
+    answer = ""
+    for i in range(len(sentence_list)):
+        answer += "Sentence " + str(i + 1) + " rankings: "
+        answer += algorithm(sentence_list[i], candidate_list[i])
+        if i + 1 != len(sentence_list):
+            answer += "\n"
+
+    answerfile = open("./script/answer.txt", "w")
+    answerfile.write(answer)
+    answerfile.close()
+
+if __name__ == '__main__':
+    main()
