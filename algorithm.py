@@ -78,7 +78,7 @@ def raw_freq_metric(candidate, has_multiple_words):
 
 
 # take into account POS/plurals etc?
-# how to handle multiword scenarios
+# how to handle multiword scenarios *****************
 # take into account raw frequency
 # SIMPLE WIKI VS REGULAR???
 def frequencymetric(candidate, has_multiple_words):
@@ -126,6 +126,11 @@ def numberofsensesmetric(candidate, numberofwords):
             complexity = 2
         print("Not in dictionary API: " + candidate)
 
+    return complexity
+
+def char_metric(candidate):
+    complexity = 0
+    
     return complexity
 
 # HIGHEST: 0.3801154152167871

@@ -91,7 +91,7 @@ Sentence 90 rankings: {set} {determine} {stick} {fix} {intent}
 Sentence 91 rankings: {manage} {succeed} {be able} {endeavour}
 Sentence 92 rankings: {control} {direct} {handle} {manage} {organise} {oversee}
 Sentence 93 rankings: {control} {direct} {handle} {manage} {take care of} {look after} {organise}
-Sentence 94 rankings: {control} {manage} {organise} {govern}
+Sentence 94 rankings: {control} {manage} {govern} {organise}
 Sentence 95 rankings: {control} {direct} {conduct} {manage} {deal with} {coordinate} {organise}
 Sentence 96 rankings: {control} {handle} {manage} {take care of} {organise} {coordinate}
 Sentence 97 rankings: {success} {manage} {be able} {succeed in} {undertake}
@@ -200,13 +200,13 @@ Sentence 199 rankings: {fear} {afraid of} {frightened of} {scared of} {dread}
 Sentence 200 rankings: {believe} {fear} {be afraid} {unfortunately} {be sorry} {dread}
 Sentence 201 rankings: {forget} {overlook} {neglect} {inadvertently omit}
 Sentence 202 rankings: {lose} {forget} {ignore} {disregard} {cease to be remembered} {overlook}
-Sentence 203 rankings: {fail} {forget} {neglect} {omit}
+Sentence 203 rankings: {forget} {fail} {neglect} {omit}
 Sentence 204 rankings: {forget} {let slip} {cease to remember} {overlook}
-Sentence 205 rankings: {fail} {forget} {overlook running} {omit} {overlook}
+Sentence 205 rankings: {forget} {fail} {overlook running} {omit} {overlook}
 Sentence 206 rankings: {remember} {forget} {cease to remember} {overlook} {fail to remember}
 Sentence 207 rankings: {lose} {forget} {put out of mind} {disregard} {overlook}
 Sentence 208 rankings: {forget} {not remember} {overlook}
-Sentence 209 rankings: {fail} {forget} {fail to remember} {omit}
+Sentence 209 rankings: {forget} {fail} {fail to remember} {omit}
 Sentence 210 rankings: {forget} {not recall} {not remember} {fail to remember} {omit to remember}
 Sentence 211 rankings: {gall} {pn} {secretion producing}
 Sentence 212 rankings: {pn} {gall}
@@ -226,7 +226,7 @@ Sentence 225 rankings: {dark} {horrible} {sinister} {dire} {unrelenting} {grim} 
 Sentence 226 rankings: {awful} {harsh} {horrid} {unpleasant} {dismal} {grim} {depressing}
 Sentence 227 rankings: {difficult} {severe} {awful} {grim} {harsh} {unrelenting} {gloomy} {harrowing}
 Sentence 228 rankings: {serious} {severe} {stern} {harsh} {forbidding} {gloomy} {grim}
-Sentence 229 rankings: {dark} {grim} {depressing} {gloomy} {bleak} {appalling} {dire}
+Sentence 229 rankings: {dark} {grim} {depressing} {gloomy} {appalling, bleak} {dire}
 Sentence 230 rankings: {severe} {dismal} {grim} {gloomy} {dire} {unpromising}
 Sentence 231 rankings: {lie} {say falsely} {say untruthfully} {fib}
 Sentence 232 rankings: {be} {wait} {remain} {lie} {falsehoods} {untruths}
@@ -288,7 +288,7 @@ Sentence 287 rankings: {hard} {difficult} {tough} {rough} {hard time} {demanding
 Sentence 288 rankings: {basic} {rough} {not smooth} {crude} {unfinished} {irregular} {rudimentary}
 Sentence 289 rankings: {poor} {dangerous} {violent} {rough} {uncivil} {disorderly} {unrefined} {raucous}
 Sentence 290 rankings: {difficult} {tough} {rough} {rudimentary} {unpleasant} {imperfect}
-Sentence 291 rankings: {run} {control} {manage} {organise} {govern}
+Sentence 291 rankings: {run} {control} {manage} {govern} {organise}
 Sentence 292 rankings: {working} {run} {training} {operate} {functioning} {sprint}
 Sentence 293 rankings: {last} {run} {total} {cover} {fill} {stretch} {extend} {continue for}
 Sentence 294 rankings: {run} {appear} {be published} {be serialised} {appear in sequence}
