@@ -82,8 +82,8 @@ def frequencymetric(candidate):
             complexity2 = 1
         elif raw_frequency < 25000:
             complexity2 = 0.5
-    else:
-        complexity2 = 10
+    # else: # MULTI WORD BEYOND REASONABLE DOUBT: DONT DO ANYTHING
+    #     complexity2 = 10
 
     return complexity + 2 * complexity2
 
@@ -124,7 +124,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.35911920063560177
+# HIGHEST: 0.37725258909522824
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
