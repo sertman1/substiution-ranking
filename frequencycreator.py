@@ -3,6 +3,8 @@ import csv
 
 word_frequencies = {"" : 0}
 
+# TODO:: FILE PATH REFACTORS
+
 def get_existing_frequencies():
     tsvin = open('wikifrequencies.csv', "rt", encoding='utf-8')
     tsvin = csv.reader(tsvin, delimiter=',')
