@@ -26,9 +26,7 @@ def lengthmetric(candidate, has_multiple_words):
     wordlength = len(candidate)
     if wordlength <= 2: # accounts for complicating technical terms, etc. 'x' 'pn'
         complexity = wordlength + 4
-    elif not has_multiple_words:
-        complexity = wordlength
-    else: # multiple words case
+    else: 
         complexity = wordlength 
     return complexity
 
@@ -146,7 +144,7 @@ def char_metric(candidate):
         #     complexity += 1
     return complexity
 
-# HIGHEST: 0.38305592834636487
+# HIGHEST: 0.38348729186618713
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):

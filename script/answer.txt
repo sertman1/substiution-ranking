@@ -170,10 +170,10 @@ Sentence 169 rankings: {can} {tin}
 Sentence 170 rankings: {can} {tin}
 Sentence 171 rankings: {night} {dark} {shadow} {darkness} {shade} {gloom} {lack of light}
 Sentence 172 rankings: {night} {dark} {uninformed} {oblivion} {ignorance}
-Sentence 173 rankings: {dark} {uncertain} {ignorant} {unclear} {oblivious} {unaware} {unsure} {uninformed, unilluminated}
+Sentence 173 rankings: {dark} {uncertain} {ignorant} {unclear} {oblivious} {unaware} {unsure} {uninformed} {unilluminated}
 Sentence 174 rankings: {dark} {secret} {shadow} {darkness} {shade} {away from light}
 Sentence 175 rankings: {night} {dark} {darkness} {obscure situation} {somewhere unilluminated}
-Sentence 176 rankings: {dark} {unaware} {uninformed, unilluminated} {ignorant} {oblivious}
+Sentence 176 rankings: {dark} {unaware} {uninformed} {unilluminated} {ignorant} {oblivious}
 Sentence 177 rankings: {black} {dark} {shadow} {gloom} {dimness}
 Sentence 178 rankings: {dark} {at night} {dusk} {sunset} {nightfall}
 Sentence 179 rankings: {night} {dark} {shadow} {mystery} {darkness} {sombre}
@@ -218,8 +218,8 @@ Sentence 217 rankings: {cheek} {nerve} {audacity} {gall} {effrontery} {temerity}
 Sentence 218 rankings: {unknown person} {gall}
 Sentence 219 rankings: {gall} {abnormal growth} {blister}
 Sentence 220 rankings: {nerve} {cheek} {audacity} {gall} {effrontery} {temerity}
-Sentence 221 rankings: {negative} {severe} {horrible} {dire} {horrific} {grim} {doom laden} {bleak} {doomy}
-Sentence 222 rankings: {terrible} {horrible} {unpleasant} {gruesome} {horrific} {unrelenting, grim}
+Sentence 221 rankings: {negative} {severe} {horrible} {dire} {horrific, grim} {doom laden} {bleak} {doomy}
+Sentence 222 rankings: {terrible} {horrible} {unpleasant} {gruesome} {horrific, grim} {unrelenting}
 Sentence 223 rankings: {terrible} {bleak} {grim} {dire} {morbid} {dismal} {depressing} {unpleasant}
 Sentence 224 rankings: {harsh} {depressing} {gloomy} {grim} {horrid} {bleak}
 Sentence 225 rankings: {dark} {horrible} {sinister} {dire} {unrelenting} {grim} {ghastly} {horrific}
@@ -244,7 +244,7 @@ Sentence 243 rankings: {unpleasant} {disagreeable} {nasty} {inhospitable}
 Sentence 244 rankings: {mean} {unpleasant} {malicious} {nasty} {unpalatable}
 Sentence 245 rankings: {painful} {malicious} {nasty} {vindictive} {unpleasant} {disagreeable}
 Sentence 246 rankings: {mean} {spiteful} {unpleasant} {nasty} {vicious}
-Sentence 247 rankings: {bad} {bitter} {horrible} {unpleasant} {nasty} {foul}
+Sentence 247 rankings: {bad} {horrible} {bitter} {unpleasant} {nasty} {foul}
 Sentence 248 rankings: {mean} {dangerous} {dirty} {horrible} {formidable} {unpleasant} {vicious} {nasty}
 Sentence 249 rankings: {unpleasant} {objectionable} {nasty} {annoying}
 Sentence 250 rankings: {mean} {bad} {offensive} {unpleasant} {malicious} {objectionable} {nasty}
