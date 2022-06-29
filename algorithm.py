@@ -30,6 +30,53 @@ def lengthmetric(candidate):
         complexity = wordlength
     return complexity
 
+def raw_freq_metric(candidate):
+    complexity = 0
+    if candidate in wiki_frequency_list:
+        raw_frequency = wiki_frequency_list[candidate]
+        if raw_frequency < 10:
+            complexity = 9.5
+        elif raw_frequency < 20:
+            complexity = 9
+        elif raw_frequency < 40:
+            complexity = 8.5
+        elif raw_frequency < 80:
+            complexity = 8
+        elif raw_frequency < 120:
+            complexity = 7.5
+        elif raw_frequency < 200:
+            complexity = 7
+        elif raw_frequency < 300:
+            complexity = 6.5
+        elif raw_frequency < 450:
+            complexity = 6
+        elif raw_frequency < 700:
+            complexity = 5.5
+        elif raw_frequency < 950:
+            complexity = 5
+        elif raw_frequency < 1300:
+            complexity = 4.5
+        elif raw_frequency < 1700:
+            complexity = 4
+        elif raw_frequency < 2500:
+            complexity = 3.5
+        elif raw_frequency < 4000:
+            complexity = 3
+        elif raw_frequency < 6000:
+            complexity = 2.5
+        elif raw_frequency < 8500:
+            complexity = 2
+        elif raw_frequency < 12000:
+            complexity = 1.5
+        elif raw_frequency < 17000:
+            complexity = 1
+        elif raw_frequency < 25000:
+            complexity = 0.5
+    # else: # MULTI WORD BEYOND REASONABLE DOUBT: DONT DO ANYTHING
+        # complexity2 = 0.5
+    return complexity
+
+
 # take into account POS/plurals etc?
 # how to handle multiword scenarios
 # take into account raw frequency
@@ -41,50 +88,7 @@ def frequencymetric(candidate):
     else:
         complexity = 9
 
-    complexity2 = 0
-    if candidate in wiki_frequency_list:
-        raw_frequency = wiki_frequency_list[candidate]
-        if raw_frequency < 10:
-            complexity2 = 9.5
-        elif raw_frequency < 20:
-            complexity2 = 9
-        elif raw_frequency < 40:
-            complexity2 = 8.5
-        elif raw_frequency < 80:
-            complexity2 = 8
-        elif raw_frequency < 120:
-            complexity2 = 7.5
-        elif raw_frequency < 200:
-            complexity2 = 7
-        elif raw_frequency < 300:
-            complexity2 = 6.5
-        elif raw_frequency < 450:
-            complexity2 = 6
-        elif raw_frequency < 700:
-            complexity2 = 5.5
-        elif raw_frequency < 950:
-            complexity2 = 5
-        elif raw_frequency < 1300:
-            complexity2 = 4.5
-        elif raw_frequency < 1700:
-            complexity2 = 4
-        elif raw_frequency < 2500:
-            complexity2 = 3.5
-        elif raw_frequency < 4000:
-            complexity2 = 3
-        elif raw_frequency < 6000:
-            complexity2 = 2.5
-        elif raw_frequency < 8500:
-            complexity2 = 2
-        elif raw_frequency < 12000:
-            complexity2 = 1.5
-        elif raw_frequency < 17000:
-            complexity2 = 1
-        elif raw_frequency < 25000:
-            complexity2 = 0.5
-    # else: # MULTI WORD BEYOND REASONABLE DOUBT: DONT DO ANYTHING
-    #     complexity2 = 10
-
+    complexity2 = raw_freq_metric(candidate)
     return complexity + 2 * complexity2
 
 def numberofsensesmetric(candidate, numberofwords):
@@ -124,7 +128,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.37725258909522824
+# HIGHEST: 0.3784688926321518
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
