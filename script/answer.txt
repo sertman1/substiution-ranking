@@ -91,7 +91,7 @@ Sentence 90 rankings: {set} {determine} {stick} {fix} {intent}
 Sentence 91 rankings: {manage} {succeed} {be able} {endeavour}
 Sentence 92 rankings: {control} {direct} {handle} {manage} {organise} {oversee}
 Sentence 93 rankings: {control} {direct} {handle} {manage} {take care of} {look after} {organise}
-Sentence 94 rankings: {control} {manage} {govern} {organise}
+Sentence 94 rankings: {control} {manage} {organise} {govern}
 Sentence 95 rankings: {control} {direct} {conduct} {manage} {deal with} {coordinate} {organise}
 Sentence 96 rankings: {control} {handle} {manage} {take care of} {organise} {coordinate}
 Sentence 97 rankings: {success} {manage} {be able} {succeed in} {undertake}
@@ -156,7 +156,7 @@ Sentence 155 rankings: {crazy} {wild} {amazing} {dramatic} {incredible} {unbelie
 Sentence 156 rankings: {huge} {wild} {extreme} {chaotic} {unpredictable} {irregular} {unrestrained}
 Sentence 157 rankings: {wild} {crazy} {extreme} {striking} {patterned} {garish} {coloured} {unrestrained}
 Sentence 158 rankings: {natural} {wild} {crazy} {reckless} {chaotic} {unrestrained} {undisciplined}
-Sentence 159 rankings: {wild} {non-captive} {untamed} {undomesticated}
+Sentence 159 rankings: {wild} {untamed} {undomesticated} {non-captive}
 Sentence 160 rankings: {wild} {uninhabited land} {uncultivated land} {out of captivity} {its natural environment} {wilderness}
 Sentence 161 rankings: {can} {bin} {disposal} {container}
 Sentence 162 rankings: {can} {tin} {receptacle}
@@ -200,26 +200,26 @@ Sentence 199 rankings: {fear} {afraid of} {frightened of} {scared of} {dread}
 Sentence 200 rankings: {believe} {fear} {be afraid} {unfortunately} {be sorry} {dread}
 Sentence 201 rankings: {forget} {overlook} {neglect} {inadvertently omit}
 Sentence 202 rankings: {lose} {forget} {ignore} {disregard} {cease to be remembered} {overlook}
-Sentence 203 rankings: {forget} {fail} {neglect} {omit}
+Sentence 203 rankings: {fail} {forget} {neglect} {omit}
 Sentence 204 rankings: {forget} {let slip} {cease to remember} {overlook}
-Sentence 205 rankings: {forget} {fail} {overlook running} {omit} {overlook}
-Sentence 206 rankings: {remember} {forget} {cease to remember} {overlook} {fail to remember}
+Sentence 205 rankings: {fail} {forget} {overlook running} {omit} {overlook}
+Sentence 206 rankings: {remember} {forget} {overlook} {cease to remember} {fail to remember}
 Sentence 207 rankings: {lose} {forget} {put out of mind} {disregard} {overlook}
 Sentence 208 rankings: {forget} {not remember} {overlook}
-Sentence 209 rankings: {forget} {fail} {fail to remember} {omit}
+Sentence 209 rankings: {fail} {forget} {fail to remember} {omit}
 Sentence 210 rankings: {forget} {not recall} {not remember} {fail to remember} {omit to remember}
 Sentence 211 rankings: {gall} {pn} {secretion producing}
 Sentence 212 rankings: {pn} {gall}
 Sentence 213 rankings: {gall} {temerity} {audacity} {nerve} {cheek} {effrontery} {impudence}
-Sentence 214 rankings: {bile-producing} {pn} {gall}
+Sentence 214 rankings: {pn} {gall} {bile-producing}
 Sentence 215 rankings: {gall} {abnormal growth} {grub} {pustule}
 Sentence 216 rankings: {bile} {gall} {bitter spirit} {cheek} {poison} {rancor}
 Sentence 217 rankings: {cheek} {nerve} {audacity} {gall} {effrontery} {temerity}
 Sentence 218 rankings: {unknown person} {gall}
 Sentence 219 rankings: {gall} {abnormal growth} {blister}
 Sentence 220 rankings: {nerve} {cheek} {audacity} {gall} {effrontery} {temerity}
-Sentence 221 rankings: {negative} {severe} {horrible} {dire} {horrific, grim} {doom laden} {bleak} {doomy}
-Sentence 222 rankings: {terrible} {horrible} {unpleasant} {gruesome} {horrific, unrelenting, grim}
+Sentence 221 rankings: {negative} {severe} {horrible} {dire} {horrific} {grim} {doom laden} {bleak} {doomy}
+Sentence 222 rankings: {terrible} {horrible} {unpleasant} {gruesome} {horrific} {unrelenting, grim}
 Sentence 223 rankings: {terrible} {bleak} {grim} {dire} {morbid} {dismal} {depressing} {unpleasant}
 Sentence 224 rankings: {harsh} {depressing} {gloomy} {grim} {horrid} {bleak}
 Sentence 225 rankings: {dark} {horrible} {sinister} {dire} {unrelenting} {grim} {ghastly} {horrific}
@@ -228,7 +228,7 @@ Sentence 227 rankings: {difficult} {severe} {awful} {grim} {harsh} {unrelenting}
 Sentence 228 rankings: {serious} {severe} {stern} {harsh} {forbidding} {gloomy} {grim}
 Sentence 229 rankings: {dark} {grim} {depressing} {gloomy} {appalling, bleak} {dire}
 Sentence 230 rankings: {severe} {dismal} {grim} {gloomy} {dire} {unpromising}
-Sentence 231 rankings: {lie} {say falsely} {say untruthfully} {fib}
+Sentence 231 rankings: {lie} {say falsely} {fib} {say untruthfully}
 Sentence 232 rankings: {be} {wait} {remain} {lie} {falsehoods} {untruths}
 Sentence 233 rankings: {get} {rest} {lie} {stretch out} {recline horizontally} {recline}
 Sentence 234 rankings: {put} {place} {lie} {extend} {had direction}
@@ -236,10 +236,10 @@ Sentence 235 rankings: {rest} {remain} {lie} {hide} {can be found} {be located} 
 Sentence 236 rankings: {stay} {lie} {stretch out} {recline} {recline horizontally}
 Sentence 237 rankings: {be} {rest} {lie} {reclined horizontally} {recline}
 Sentence 238 rankings: {place} {position} {sit} {lie} {that was} {resting}
-Sentence 239 rankings: {lie} {telling untruths} {deceive} {fibbing, fib} {telling falsehoods} {falsify}
+Sentence 239 rankings: {lie} {telling untruths} {deceive} {fib} {telling falsehoods} {falsify} {fibbing}
 Sentence 240 rankings: {leave} {lie} {lay} {arrange} {resting} {situate}
 Sentence 241 rankings: {horrible} {unpleasant} {vicious} {spiteful} {nasty}
-Sentence 242 rankings: {mean} {unpleasant} {disagreeable, nasty} {spiteful} {malicious}
+Sentence 242 rankings: {mean} {unpleasant} {disagreeable} {nasty} {spiteful} {malicious}
 Sentence 243 rankings: {unpleasant} {disagreeable} {nasty} {inhospitable}
 Sentence 244 rankings: {mean} {unpleasant} {malicious} {nasty} {unpalatable}
 Sentence 245 rankings: {painful} {malicious} {nasty} {vindictive} {unpleasant} {disagreeable}
@@ -269,7 +269,7 @@ Sentence 268 rankings: {outside} {external} {outdoor} {roadside} {open-air}
 Sentence 269 rankings: {outside} {outdoor} {open-air}
 Sentence 270 rankings: {outside} {outdoor} {open-air} {alfresco}
 Sentence 271 rankings: {good} {fair} {reasonable} {reliable} {good value} {sensible}
-Sentence 272 rankings: {measured} {reasonable} {reliable} {rational} {well-judged} {sensible}
+Sentence 272 rankings: {measured} {reasonable} {reliable} {rational} {sensible} {well-judged}
 Sentence 273 rankings: {fair} {reasonable} {moderate} {acceptable} {affordable} {inexpensive}
 Sentence 274 rankings: {fair} {reasonable} {rational} {sensible} {equitable}
 Sentence 275 rankings: {fair} {appropriate} {reasonable} {moderate} {acceptable} {manageable} {justifiable}
@@ -288,7 +288,7 @@ Sentence 287 rankings: {hard} {difficult} {tough} {rough} {demanding} {hard time
 Sentence 288 rankings: {basic} {rough} {not smooth} {crude} {unfinished} {irregular} {rudimentary}
 Sentence 289 rankings: {poor} {dangerous} {violent} {rough} {uncivil} {disorderly} {unrefined} {raucous}
 Sentence 290 rankings: {difficult} {tough} {rough} {rudimentary} {unpleasant} {imperfect}
-Sentence 291 rankings: {run} {control} {manage} {govern} {organise}
+Sentence 291 rankings: {run} {control} {manage} {organise} {govern}
 Sentence 292 rankings: {working} {run} {training} {operate} {functioning} {sprint}
 Sentence 293 rankings: {last} {run} {total} {cover} {fill} {stretch} {extend} {continue for}
 Sentence 294 rankings: {run} {appear} {be published} {be serialised} {appear in sequence}

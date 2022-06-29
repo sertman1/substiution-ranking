@@ -26,8 +26,10 @@ def lengthmetric(candidate, has_multiple_words):
     wordlength = len(candidate)
     if wordlength <= 2: # accounts for complicating technical terms, etc. 'x' 'pn'
         complexity = wordlength + 4
-    else:
+    elif not has_multiple_words:
         complexity = wordlength
+    else: # multiple words case
+        complexity = wordlength 
     return complexity
 
 def raw_freq_metric(candidate, has_multiple_words):
@@ -72,8 +74,8 @@ def raw_freq_metric(candidate, has_multiple_words):
             complexity = 1
         elif raw_frequency < 25000:
             complexity = 0.5
-    # else: # MULTI WORD BEYOND REASONABLE DOUBT: DONT DO ANYTHING
-        # complexity2 = 0.5
+    else:
+        complexity = 10
     return complexity
 
 
@@ -88,7 +90,10 @@ def frequencymetric(candidate, has_multiple_words):
     else:
         complexity = 9
 
-    complexity2 = raw_freq_metric(candidate, has_multiple_words)
+    if not has_multiple_words:
+        complexity2 = raw_freq_metric(candidate, has_multiple_words)
+    else:
+        complexity2 = 0
     return complexity + 2 * complexity2
 
 def numberofsensesmetric(candidate, numberofwords):
@@ -141,7 +146,7 @@ def char_metric(candidate):
         #     complexity += 1
     return complexity
 
-# HIGHEST: 0.38211780324292194
+# HIGHEST: 0.38305592834636487
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
@@ -152,9 +157,9 @@ def rankingmetric(target, candidate, context):
             numberofwords += 1
 
     ## DECIMALS ARE DICEY. NEED TO NORMALIZE FOR TIES??
-    complexity += 0.5 * char_metric(candidate)
+    complexity += 0 * char_metric(candidate)
     complexity += 0.85 * lengthmetric(candidate, has_multiple_words=numberofwords > 1)
-    complexity += 0.7 * numberofwords
+    complexity += 1 * numberofwords
     if numberofwords >= 3:
         complexity += 1
     complexity += 1 * frequencymetric(candidate, has_multiple_words=numberofwords > 1)
