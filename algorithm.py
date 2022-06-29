@@ -30,7 +30,7 @@ def lengthmetric(candidate, has_multiple_words):
         complexity = wordlength 
     return complexity
 
-def raw_freq_metric(candidate, has_multiple_words):
+def raw_freq_metric(candidate):
     complexity = 0
     if candidate in wiki_frequency_list:
         raw_frequency = wiki_frequency_list[candidate]
@@ -81,17 +81,28 @@ def raw_freq_metric(candidate, has_multiple_words):
 # how to handle multiword scenarios *****************
 # take into account raw frequency
 # SIMPLE WIKI VS REGULAR???
-def frequencymetric(candidate, has_multiple_words):
+def frequencymetric(candidate, num_words):
     complexity = 0
     if candidate in frequencylist:
         complexity = (int((frequencylist[candidate][0])) / 1000)
     else:
         complexity = 9
 
-    if not has_multiple_words:
-        complexity2 = raw_freq_metric(candidate, has_multiple_words)
-    else:
-        complexity2 = 0
+    complexity2 = 0
+    if num_words == 1:
+        complexity2 += raw_freq_metric(candidate)
+    # else: # multiple words case
+    #     complexity2 += 1
+    #     word = ""
+    #     for c in candidate: # tokenize words in candidate
+    #         if c != " ":
+    #             word += c
+    #         else:
+    #             complexity2 += raw_freq_metric(candidate)
+    #             word == ""
+
+    #     complexity2 /= num_words # take the average of each word in the candidate
+
     return complexity + 2 * complexity2
 
 def numberofsensesmetric(candidate, numberofwords):
@@ -144,7 +155,7 @@ def char_metric(candidate):
         #     complexity += 1
     return complexity
 
-# HIGHEST: 0.38348729186618713
+# HIGHEST: 0.38653330327001045
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
@@ -160,7 +171,7 @@ def rankingmetric(target, candidate, context):
     complexity += 1 * numberofwords
     if numberofwords >= 3:
         complexity += 1
-    complexity += 1 * frequencymetric(candidate, has_multiple_words=numberofwords > 1)
+    complexity += 1 * frequencymetric(candidate, numberofwords)
 
     # number of meanings
     # complexity += numberofsensesmetric(candidate, numberofwords)
