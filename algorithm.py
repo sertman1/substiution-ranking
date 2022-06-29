@@ -6,7 +6,7 @@ dictionaryapi = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 sentencefile = './assets/sentence_word.csv'
 candidatefile = './assets/candidates.csv'
 frequencyfile = './assets/FrencuenciasEN.csv'
-wikifrequencyfiles = 'wikifrequencies.csv' # TODO: REFACTOR
+wikifrequencyfiles = './assets/wikifrequencies.csv'
 
 frequencylist = {}
 wiki_frequency_list = {}
@@ -268,7 +268,7 @@ def retrieve_data_from_files(sentence_list, candidate_list):
     tsvin2 = csv.reader(tsvin2, delimiter='\t')
     tsvin3 = open(frequencyfile, "rt", encoding='utf-8')
     tsvin3 = csv.reader(tsvin3, delimiter=';')
-    tsvin4 = open('wikifrequencies.csv', "rt", encoding='utf-8')
+    tsvin4 = open(wikifrequencyfiles, "rt", encoding='utf-8')
     tsvin4 = csv.reader(tsvin4, delimiter=',')
 
     for row in tsvin:
@@ -292,7 +292,7 @@ def main():
         if i + 1 != len(sentence_list):
             answer += "\n"
 
-    answerfile = open("./script/answer.txt", "w")
+    answerfile = open("./scorerankings/answer.txt", "w")
     answerfile.write(answer)
     answerfile.close()
 

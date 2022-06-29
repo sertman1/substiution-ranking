@@ -157,7 +157,7 @@ Sentence 156 rankings: {huge} {wild} {extreme} {chaotic} {unpredictable} {irregu
 Sentence 157 rankings: {wild} {crazy} {extreme} {striking} {patterned} {coloured} {garish} {unrestrained}
 Sentence 158 rankings: {natural} {wild} {crazy} {reckless} {chaotic} {unrestrained} {undisciplined}
 Sentence 159 rankings: {wild} {untamed} {undomesticated} {non-captive}
-Sentence 160 rankings: {wild} {uninhabited land} {uncultivated land} {out of captivity} {its natural environment} {wilderness}
+Sentence 160 rankings: {wild} {uninhabited land} {uncultivated land} {out of captivity} {wilderness} {its natural environment}
 Sentence 161 rankings: {can} {bin} {disposal} {container}
 Sentence 162 rankings: {can} {tin} {receptacle}
 Sentence 163 rankings: {can} {tin}
@@ -200,13 +200,13 @@ Sentence 199 rankings: {fear} {afraid of} {frightened of} {scared of} {dread}
 Sentence 200 rankings: {believe} {fear} {be afraid} {unfortunately} {be sorry} {dread}
 Sentence 201 rankings: {forget} {overlook} {neglect} {inadvertently omit}
 Sentence 202 rankings: {lose} {forget} {ignore} {disregard} {cease to be remembered} {overlook}
-Sentence 203 rankings: {forget} {fail} {neglect} {omit}
+Sentence 203 rankings: {fail} {forget} {neglect} {omit}
 Sentence 204 rankings: {forget} {let slip} {cease to remember} {overlook}
-Sentence 205 rankings: {forget} {fail} {overlook running} {omit} {overlook}
+Sentence 205 rankings: {fail} {forget} {overlook running} {omit} {overlook}
 Sentence 206 rankings: {remember} {forget} {overlook} {cease to remember} {fail to remember}
 Sentence 207 rankings: {lose} {forget} {put out of mind} {disregard} {overlook}
 Sentence 208 rankings: {forget} {not remember} {overlook}
-Sentence 209 rankings: {forget} {fail} {fail to remember} {omit}
+Sentence 209 rankings: {fail} {forget} {fail to remember} {omit}
 Sentence 210 rankings: {forget} {not recall} {not remember} {fail to remember} {omit to remember}
 Sentence 211 rankings: {gall} {pn} {secretion producing}
 Sentence 212 rankings: {gall} {pn}

@@ -3,10 +3,8 @@ import csv
 
 word_frequencies = {"" : 0}
 
-# TODO:: FILE PATH REFACTORS
-
 def get_existing_frequencies():
-    tsvin = open('wikifrequencies.csv', "rt", encoding='utf-8')
+    tsvin = open('./assets/wikifrequencies.csv', "rt", encoding='utf-8')
     tsvin = csv.reader(tsvin, delimiter=',')
     for row in tsvin:
         word_frequencies[row[0]] = (int)(row[1])
@@ -15,7 +13,7 @@ def write_to_csv(dict):
     # sort frequencies from highest to lowest
     dict = {k: v for k, v in sorted(dict.items(), key=lambda item: item[1], reverse=True)}
 
-    with open('wikifrequencies.csv', 'w') as file:
+    with open('./assets/wikifrequencies.csv', 'w') as file:
         for key in dict.keys():
             file.write("%s, %s\n" % (key, dict[key]))
 
@@ -69,14 +67,14 @@ def main():
 
     wiki_articles = load_dataset("wikipedia", "20220301.en", split="train")
 
-    with open('curr_article_index', 'r') as f:
+    with open('./assets/curr_article_index', 'r') as f:
         i = int(f.read()) # start loop where program last left off
 
     while i < 6458670: # number of EN articles in the provided dataset
         process_article(wiki_articles[i]['text'])
 
         if i % 1000 == 0: # every 1000 articles, record which one the program is on to avoid repetitive processing and write updated frequencies to csv
-            with open('curr_article_index', 'w') as f:
+            with open('./assets/curr_article_index', 'w') as f:
                 f.write(str(i))
             write_to_csv(word_frequencies)
         i += 1
