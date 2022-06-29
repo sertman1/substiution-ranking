@@ -23,7 +23,7 @@ Sentence 22 rankings: {take} {risk} {experiment in their roles}
 Sentence 23 rankings: {be} {take} {last} {engage for}
 Sentence 24 rankings: {take} {last} {occupy}
 Sentence 25 rankings: {take} {include} {consider} {accept} {think about}
-Sentence 26 rankings: {take} {run} {risk} {accept} {undergo} {tolerate}
+Sentence 26 rankings: {take} {run} {risk} {accept} {tolerate} {undergo}
 Sentence 27 rankings: {get} {take} {collect} {gather} {pick up} {grasp}
 Sentence 28 rankings: {take} {grow} {establish itself}
 Sentence 29 rankings: {take} {happen} {occur}
@@ -38,7 +38,7 @@ Sentence 37 rankings: {tight} {uncomfortable} {compressed} {constricted} {stretc
 Sentence 38 rankings: {tight} {secure} {firmly} {securely}
 Sentence 39 rankings: {close} {near} {tight} {close to} {on top of} {close by}
 Sentence 40 rankings: {close} {low} {tight} {pressured} {restricted} {constricted}
-Sentence 41 rankings: {level} {bar} {obstruction} {barrier} {hurdle} {marker} {pole}
+Sentence 41 rankings: {level} {bar} {obstruction} {barrier} {hurdle} {pole} {marker}
 Sentence 42 rankings: {bar} {handlebar}
 Sentence 43 rankings: {bar} {drinking house} {pub} {saloon} {hostelry}
 Sentence 44 rankings: {bar} {ban} {exclusion} {prohibition} {restriction}
@@ -98,7 +98,7 @@ Sentence 97 rankings: {success} {manage} {be able} {succeed in} {undertake}
 Sentence 98 rankings: {control} {manage} {administer} {coordinate}
 Sentence 99 rankings: {success} {manage} {be able} {succeed in} {contrive}
 Sentence 100 rankings: {run} {control} {direct} {conduct} {manage} {coordinate} {administer}
-Sentence 101 rankings: {good} {neat} {clever} {well-formulated} {orderly}
+Sentence 101 rankings: {good} {neat} {clever} {orderly} {well-formulated}
 Sentence 102 rankings: {smart} {neat} {clever}
 Sentence 103 rankings: {simple} {neat} {tidy}
 Sentence 104 rankings: {order} {tidy} {orderly} {neat}
@@ -133,7 +133,7 @@ Sentence 132 rankings: {wait} {stand} {sit} {remain} {remain inactive}
 Sentence 133 rankings: {stay} {stand} {remain} {be resolute} {endure}
 Sentence 134 rankings: {continue} {stand} {remain} {remain upright} {prevail}
 Sentence 135 rankings: {stand} {represent} {symbolize} {abbreviate}
-Sentence 136 rankings: {stay} {wait} {stand} {remain} {rely}
+Sentence 136 rankings: {wait} {stay} {stand} {remain} {rely}
 Sentence 137 rankings: {place} {support} {table} {position} {stand} {location} {frame} {platform} {placement}
 Sentence 138 rankings: {support} {table} {stand} {base} {upright}
 Sentence 139 rankings: {support} {stand} {base} {structure}
@@ -154,7 +154,7 @@ Sentence 153 rankings: {free} {wild} {chaotic} {unrestrained}
 Sentence 154 rankings: {wild} {non-captive} {untamed} {undomesticated}
 Sentence 155 rankings: {crazy} {wild} {amazing} {dramatic} {incredible} {unbelievable}
 Sentence 156 rankings: {huge} {wild} {extreme} {chaotic} {unpredictable} {irregular} {unrestrained}
-Sentence 157 rankings: {wild} {crazy} {extreme} {striking} {patterned} {coloured} {garish} {unrestrained}
+Sentence 157 rankings: {wild} {crazy} {extreme} {striking} {patterned} {garish} {coloured} {unrestrained}
 Sentence 158 rankings: {natural} {wild} {crazy} {reckless} {chaotic} {unrestrained} {undisciplined}
 Sentence 159 rankings: {wild} {non-captive} {untamed} {undomesticated}
 Sentence 160 rankings: {wild} {uninhabited land} {uncultivated land} {out of captivity} {its natural environment} {wilderness}
@@ -227,7 +227,7 @@ Sentence 226 rankings: {awful} {harsh} {horrid} {unpleasant} {dismal} {grim} {de
 Sentence 227 rankings: {difficult} {severe} {awful} {grim} {harsh} {unrelenting} {gloomy} {harrowing}
 Sentence 228 rankings: {serious} {severe} {stern} {harsh} {forbidding} {gloomy} {grim}
 Sentence 229 rankings: {dark} {grim} {depressing} {gloomy} {bleak} {appalling} {dire}
-Sentence 230 rankings: {severe} {dismal} {grim} {dire} {gloomy} {unpromising}
+Sentence 230 rankings: {severe} {dismal} {grim} {gloomy} {dire} {unpromising}
 Sentence 231 rankings: {lie} {say falsely} {say untruthfully} {fib}
 Sentence 232 rankings: {be} {wait} {remain} {lie} {falsehoods} {untruths}
 Sentence 233 rankings: {get} {rest} {lie} {stretch out} {recline horizontally} {recline}
@@ -239,12 +239,12 @@ Sentence 238 rankings: {place} {position} {sit} {lie} {that was} {resting}
 Sentence 239 rankings: {lie} {telling untruths} {deceive} {fibbing, fib} {telling falsehoods} {falsify}
 Sentence 240 rankings: {leave} {lie} {lay} {arrange} {resting} {situate}
 Sentence 241 rankings: {horrible} {unpleasant} {vicious} {spiteful} {nasty}
-Sentence 242 rankings: {mean} {unpleasant} {disagreeable} {nasty, spiteful} {malicious}
+Sentence 242 rankings: {mean} {unpleasant} {disagreeable, nasty} {spiteful} {malicious}
 Sentence 243 rankings: {unpleasant} {disagreeable} {nasty} {inhospitable}
 Sentence 244 rankings: {mean} {unpleasant} {malicious} {nasty} {unpalatable}
 Sentence 245 rankings: {painful} {malicious} {nasty} {vindictive} {unpleasant} {disagreeable}
 Sentence 246 rankings: {mean} {spiteful} {unpleasant} {nasty} {vicious}
-Sentence 247 rankings: {bad} {horrible} {bitter} {unpleasant} {nasty} {foul}
+Sentence 247 rankings: {bad} {bitter} {horrible} {unpleasant} {nasty} {foul}
 Sentence 248 rankings: {mean} {dangerous} {dirty} {horrible} {formidable} {unpleasant} {vicious} {nasty}
 Sentence 249 rankings: {unpleasant} {objectionable} {nasty} {annoying}
 Sentence 250 rankings: {mean} {bad} {offensive} {unpleasant} {malicious} {objectionable} {nasty}
@@ -258,16 +258,16 @@ Sentence 257 rankings: {almost} {nearly}
 Sentence 258 rankings: {almost} {nearly}
 Sentence 259 rankings: {almost} {half} {quite} {nearly} {anyway} {even approximately} {anything like}
 Sentence 260 rankings: {almost} {nearly} {approximately}
-Sentence 261 rankings: {outside} {open-air} {outdoor} {outward-bound}
-Sentence 262 rankings: {outside} {open-air} {outdoor} {outward-bound}
+Sentence 261 rankings: {outside} {outdoor} {open-air} {outward-bound}
+Sentence 262 rankings: {outside} {outdoor} {open-air} {outward-bound}
 Sentence 263 rankings: {outside} {external} {outdoor}
-Sentence 264 rankings: {outside} {external} {uncovered} {open-air} {outdoor}
+Sentence 264 rankings: {outside} {external} {uncovered} {outdoor} {open-air}
 Sentence 265 rankings: {outside} {external} {open-air} {uncovered} {outdoor}
 Sentence 266 rankings: {outside} {outdoor} {open-air}
-Sentence 267 rankings: {outside} {external} {open-air} {outdoor} {all-weather}
+Sentence 267 rankings: {outside} {external} {outdoor} {open-air} {all-weather}
 Sentence 268 rankings: {outside} {external} {outdoor} {roadside} {open-air}
-Sentence 269 rankings: {outside} {open-air} {outdoor}
-Sentence 270 rankings: {outside} {open-air} {outdoor} {alfresco}
+Sentence 269 rankings: {outside} {outdoor} {open-air}
+Sentence 270 rankings: {outside} {outdoor} {open-air} {alfresco}
 Sentence 271 rankings: {good} {fair} {reasonable} {reliable} {good value} {sensible}
 Sentence 272 rankings: {measured} {reasonable} {reliable} {rational} {well-judged} {sensible}
 Sentence 273 rankings: {fair} {reasonable} {moderate} {acceptable} {affordable} {inexpensive}
@@ -281,7 +281,7 @@ Sentence 280 rankings: {fair} {reasonable} {moderate} {acceptable} {sensible} {i
 Sentence 281 rankings: {general} {broad} {rough} {vague} {preliminary} {approximate}
 Sentence 282 rankings: {wild} {rough} {coarse} {uncut} {uneven}
 Sentence 283 rankings: {rough} {uneven} {coarse} {jagged} {unfinished}
-Sentence 284 rankings: {rough} {approximate, inexact} {rudimentary}
+Sentence 284 rankings: {rough} {approximate} {inexact} {rudimentary}
 Sentence 285 rankings: {rough} {inexact} {approximate} {rudimentary}
 Sentence 286 rankings: {simple} {rough} {approximate} {inexact}
 Sentence 287 rankings: {hard} {difficult} {tough} {rough} {hard time} {demanding} {harsh}

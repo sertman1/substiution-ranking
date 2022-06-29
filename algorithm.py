@@ -11,7 +11,7 @@ wikifrequencyfiles = 'wikifrequencies.csv' # TODO: REFACTOR
 frequencylist = {}
 wiki_frequency_list = {}
 
-def lengthmetric(candidate):
+def lengthmetric(candidate, has_multiple_words):
     # complexity = 0
     # wordlength = len(candidate)
     # if wordlength >= 5 and wordlength <= 6:
@@ -30,7 +30,7 @@ def lengthmetric(candidate):
         complexity = wordlength
     return complexity
 
-def raw_freq_metric(candidate):
+def raw_freq_metric(candidate, has_multiple_words):
     complexity = 0
     if candidate in wiki_frequency_list:
         raw_frequency = wiki_frequency_list[candidate]
@@ -81,14 +81,14 @@ def raw_freq_metric(candidate):
 # how to handle multiword scenarios
 # take into account raw frequency
 # SIMPLE WIKI VS REGULAR???
-def frequencymetric(candidate):
+def frequencymetric(candidate, has_multiple_words):
     complexity = 0
     if candidate in frequencylist:
         complexity = (int((frequencylist[candidate][0])) / 1000)
     else:
         complexity = 9
 
-    complexity2 = raw_freq_metric(candidate)
+    complexity2 = raw_freq_metric(candidate, has_multiple_words)
     return complexity + 2 * complexity2
 
 def numberofsensesmetric(candidate, numberofwords):
@@ -128,7 +128,7 @@ def numberofsensesmetric(candidate, numberofwords):
 
     return complexity
 
-# HIGHEST: 0.3784688926321518
+# HIGHEST: 0.3801154152167871
 # CONTEXT, MULTIWORD
 
 def rankingmetric(target, candidate, context):
@@ -141,11 +141,11 @@ def rankingmetric(target, candidate, context):
     # type of characters (-, x, c, z, etc..?)
 
     ## DECIMALS ARE DICEY. NEED TO NORMALIZE FOR TIES??
-    complexity += 0.85 * lengthmetric(candidate)
+    complexity += 0.85 * lengthmetric(candidate, has_multiple_words=numberofwords > 1)
     complexity += 0.7 * numberofwords
     if numberofwords >= 3:
         complexity += 1
-    complexity += 1 * frequencymetric(candidate)
+    complexity += 1 * frequencymetric(candidate, has_multiple_words=numberofwords > 1)
 
     # number of meanings
     # complexity += numberofsensesmetric(candidate, numberofwords)
