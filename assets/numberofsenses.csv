@@ -1,40 +1,131 @@
 take, 65
 run, 63
+go, 54
+set, 44
+base, 43
 clear, 42
 block, 42
+frame, 40
 sharp, 39
 bar, 39
+cover, 39
+do, 38
 get, 36
+black, 36
 cross, 34
 pick up, 32
 low, 32
+high, 32
 positive, 29
 level, 29
+order, 29
+stay, 28
+side, 28
+shadow, 27
+lay, 27
+stand, 26
 show, 25
+patch, 25
+rough, 25
+natural, 24
+stretch, 24
 rod, 23
+negative, 23
+fair, 23
+hard, 23
 great, 22
+trim, 22
+outside, 22
+bad, 22
+support, 21
+fail, 21
+resolve, 20
+striking, 20
+resting, 20
+flow, 20
+platform, 19
 near, 18
+fix, 18
+sit, 18
+dirty, 18
+part, 18
+wild, 17
+free, 17
+general, 17
+aspect, 17
 light, 16
 shining, 16
+simple, 16
+long, 16
+so, 16
+put, 16
+half, 16
 deep, 15
+cool, 15
+full, 15
+coloured, 15
+test, 15
+rest, 15
+training, 15
+use, 15
 picture, 14
 pole, 14
 find, 14
+direct, 14
+nice, 14
+well, 14
+gall, 14
+lie, 14
+chair, 14
 small, 13
 stretched, 13
 secure, 13
 marker, 13
 banner, 13
 see, 13
+conduct, 13
+tidy, 13
+rich, 13
+represent, 13
+table, 13
+with, 13
+secret, 13
+dread, 13
+just, 13
+broad, 13
 bright, 12
 production, 12
 feel, 12
 write, 12
+stick, 12
+handle, 12
+control, 12
+detail, 12
+wait, 12
+place, 12
+nerve, 12
+vague, 12
+tough, 12
+function, 12
+complete, 12
 gather, 11
 cramped, 11
 slab, 11
 metal, 11
 sequence, 11
+position, 11
+extreme, 11
+tin, 11
+night, 11
+fear, 11
+lose, 11
+blister, 11
+nasty, 11
+sensible, 11
+measured, 11
+moderate, 11
+fill, 11
+avoid, 11
 brilliant, 10
 accept, 10
 collect, 10
@@ -44,8 +135,30 @@ biscuit, 10
 segment, 10
 sample, 10
 present, 10
+manage, 10
+upright, 10
+then, 10
+crazy, 10
+cheek, 10
+poison, 10
+extend, 10
+perspective, 10
 clever, 9
 saloon, 9
+cure, 9
+undertake, 9
+neat, 9
+uniform, 9
+continue, 9
+structure, 9
+gloom, 9
+shade, 9
+overlook, 9
+remember, 9
+grub, 9
+awful, 9
+foul, 9
+team, 9
 risk, 8
 last, 8
 consider, 8
@@ -56,12 +169,58 @@ indicator, 8
 think, 8
 seek, 8
 buy, 8
+determine, 8
+succeed, 8
+govern, 8
+orderly, 8
+abounding, 8
+lush, 8
+watch, 8
+remain, 8
+amazing, 8
+irregular, 8
+mystery, 8
+exam, 8
+suspect, 8
+worry, 8
+bitter, 8
+rational, 8
+likely, 8
+crude, 8
+imperfect, 8
+total, 8
+proceed, 8
+view, 8
+contingent, 8
 good, 7
 film, 7
 apparatus, 7
 mixture, 7
 discover, 7
 realise, 7
+sort out, 7
+administer, 7
+stance, 7
+much, 7
+patterned, 7
+container, 7
+bin, 7
+dark, 7
+uncertain, 7
+analysis, 7
+depressing, 7
+harrowing, 7
+forbidding, 7
+appalling, 7
+falsify, 7
+external, 7
+appropriate, 7
+basic, 7
+poor, 7
+violent, 7
+operate, 7
+work, 7
+ally, 7
 gleam, 6
 include, 6
 grasp, 6
@@ -71,6 +230,37 @@ lounge, 6
 transverse, 6
 irritated, 6
 felt, 6
+mend, 6
+coordinate, 6
+ordered, 6
+significant, 6
+heavily, 6
+endure, 6
+location, 6
+attitude, 6
+including, 6
+animal, 6
+feral, 6
+canister, 6
+ignorant, 6
+sunset, 6
+sombre, 6
+scrutiny, 6
+study, 6
+expect, 6
+neglect, 6
+grim, 6
+terrible, 6
+mean, 6
+uncovered, 6
+uneven, 6
+demanding, 6
+disorderly, 6
+working, 6
+functioning, 6
+appear, 6
+contradict, 6
+execute, 6
 intelligent, 5
 promising, 5
 happen, 5
@@ -82,6 +272,41 @@ exclude, 5
 prevent, 5
 x, 5
 obtain, 5
+calculate, 5
+heal, 5
+repair, 5
+solve, 5
+improve, 5
+intent, 5
+endeavour, 5
+organise, 5
+oversee, 5
+look after, 5
+success, 5
+abbreviate, 5
+chaotic, 5
+wilderness, 5
+can, 5
+receptacle, 5
+darkness, 5
+dusk, 5
+forget, 5
+sinister, 5
+serious, 5
+recline, 5
+leave, 5
+painful, 5
+dangerous, 5
+annoying, 5
+offensive, 5
+nearly, 5
+anyway, 5
+reasonable, 5
+tolerable, 5
+approximate, 5
+uncut, 5
+jagged, 5
+responsibility, 5
 vibrant, 4
 vivid, 4
 alight, 4
@@ -95,6 +320,37 @@ crossbar, 4
 annoyed, 4
 believe, 4
 locate, 4
+ascertain, 4
+contrive, 4
+rewarding, 4
+wealthy, 4
+elaborate, 4
+lavish, 4
+detailed, 4
+seriously, 4
+prevail, 4
+symbolize, 4
+sufficient, 4
+indeed, 4
+unrestrained, 4
+oblivion, 4
+unclear, 4
+examination, 4
+anticipate, 4
+ignore, 4
+dire, 4
+horrible, 4
+morbid, 4
+harsh, 4
+ghastly, 4
+difficult, 4
+situate, 4
+quite, 4
+enough, 4
+preliminary, 4
+sprint, 4
+go against, 4
+rush, 4
 smart, 3
 colourful, 3
 motivated, 3
@@ -116,6 +372,50 @@ angry, 3
 ultimately, 3
 finally, 3
 invent, 3
+take care of, 3
+pleasing, 3
+terrific, 3
+abundant, 3
+ample, 3
+valuable, 3
+badly, 3
+critically, 3
+look on, 3
+placement, 3
+and, 3
+properly, 3
+goodbye, 3
+incredible, 3
+dramatic, 3
+unbelievable, 3
+disposal, 3
+consultation, 3
+scare, 3
+omit, 3
+temerity, 3
+pustule, 3
+bile, 3
+severe, 3
+bleak, 3
+dismal, 3
+horrid, 3
+fib, 3
+falsehoods, 3
+fibbing, 3
+arrange, 3
+vicious, 3
+disagreeable, 3
+unpalatable, 3
+practically, 3
+outdoor, 3
+alfresco, 3
+reliable, 3
+equitable, 3
+adequate, 3
+inexact, 3
+rudimentary, 3
+raucous, 3
+flee, 3
 luminous, 2
 capable, 2
 skilled, 2
@@ -132,6 +432,49 @@ lastly, 2
 also, 2
 detect, 2
 look for, 2
+correct, 2
+well-off, 2
+highly, 2
+do-nothing, 2
+safely, 2
+good luck, 2
+carefully, 2
+unpredictable, 2
+huge, 2
+reckless, 2
+undisciplined, 2
+uninformed, 2
+ignorance, 2
+oblivious, 2
+unaware, 2
+unsure, 2
+inspection, 2
+assessment, 2
+enquiry, 2
+unfortunately, 2
+disregard, 2
+audacity, 2
+effrontery, 2
+impudence, 2
+gloomy, 2
+stern, 2
+unpromising, 2
+untruths, 2
+hide, 2
+malicious, 2
+inhospitable, 2
+vindictive, 2
+formidable, 2
+almost, 2
+remotely, 2
+roadside, 2
+acceptable, 2
+manageable, 2
+credible, 2
+coarse, 2
+uncivil, 2
+unrefined, 2
+scurry, 2
 up-and-coming, 1
 talented, 1
 tolerate, 1
@@ -145,6 +488,45 @@ handlebar, 1
 irate, 1
 exist, 1
 evident, 1
+compact, 1
+harshly, 1
+gravely, 1
+severely, 1
+extremely, 1
+sternly, 1
+dramatically, 1
+devastatingly, 1
+rely, 1
+along with, 1
+satisfactorily, 1
+successfully, 1
+bon voyage, 1
+excellently, 1
+healthily, 1
+efficiently, 1
+untamed, 1
+undomesticated, 1
+garish, 1
+unilluminated, 1
+nightfall, 1
+investigation, 1
+rancor, 1
+horrific, 1
+doomy, 1
+unpleasant, 1
+gruesome, 1
+unrelenting, 1
+deceive, 1
+spiteful, 1
+objectionable, 1
+approximately, 1
+open-air, 1
+all-weather, 1
+inexpensive, 1
+affordable, 1
+justifiable, 1
+unfinished, 1
+standpoint, 1
 well-lit, 0
 most able, 0
 most talented, 0
@@ -172,3 +554,98 @@ last of all, 0
 recognised as, 0
 realise is, 0
 see as, 0
+perceive as, 0
+make up for, 0
+compensate for, 0
+put right, 0
+be able, 0
+deal with, 0
+succeed in, 0
+well-formulated, 0
+full of, 0
+packed with, 0
+remain inactive, 0
+remain aloof, 0
+remain immobile, 0
+be resolute, 0
+remain upright, 0
+in addition to, 0
+in plenty of time, 0
+in good health, 0
+untamed animal, 0
+non-domestic, 0
+non-captive, 0
+uninhabited land, 0
+uncultivated land, 0
+out of captivity, 0
+its natural environment, 0
+lack of light, 0
+away from light, 0
+somewhere unilluminated, 0
+obscure situation, 0
+dimness, 0
+at night, 0
+absence of light, 0
+be afraid of, 0
+be scared of, 0
+be alarmed by, 0
+be frightened of, 0
+be frightened by, 0
+afraid of, 0
+be afraid, 0
+be frightened, 0
+dread entering, 0
+be anxious, 0
+be alarmed, 0
+anxiously anticipated, 0
+worry about, 0
+be apprehensive, 0
+be concerned, 0
+be worried, 0
+frightened of, 0
+scared of, 0
+be sorry, 0
+inadvertently omit, 0
+cease to be remembered, 0
+let slip, 0
+cease to remember, 0
+overlook running, 0
+fail to remember, 0
+put out of mind, 0
+not remember, 0
+not recall, 0
+omit to remember, 0
+pn, 0
+secretion producing, 0
+bile-producing, 0
+abnormal growth, 0
+bitter spirit, 0
+unknown person, 0
+doom laden, 0
+say falsely, 0
+say untruthfully, 0
+recline horizontally, 0
+stretch out, 0
+had direction, 0
+can be found, 0
+be located, 0
+be bury, 0
+reclined horizontally, 0
+that was, 0
+telling untruths, 0
+telling falsehoods, 0
+even approximately, 0
+anywhere near, 0
+anything like, 0
+outward-bound, 0
+good value, 0
+well-judged, 0
+high enough, 0
+hard time, 0
+not smooth, 0
+continue for, 0
+be published, 0
+appear in sequence, 0
+be serialised, 0
+try to escape, 0
+for us, 0
