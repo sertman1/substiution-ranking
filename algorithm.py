@@ -6,10 +6,12 @@ dictionaryapi = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 sentencefile = './assets/sentence_word.csv'
 candidatefile = './assets/candidates.csv'
 frequencyfile = './assets/FrencuenciasEN.csv'
-wikifrequencyfiles = './assets/wikifrequencies.csv'
+wikifrequencyfile = './assets/wikifrequencies.csv'
+numsensesfile = './assets/numberofsenses.csv'
 
 frequencylist = {}
 wiki_frequency_list = {}
+numsenseslist = {}
 
 def lengthmetric(candidate, has_multiple_words):
     # complexity = 0
@@ -268,8 +270,10 @@ def retrieve_data_from_files(sentence_list, candidate_list):
     tsvin2 = csv.reader(tsvin2, delimiter='\t')
     tsvin3 = open(frequencyfile, "rt", encoding='utf-8')
     tsvin3 = csv.reader(tsvin3, delimiter=';')
-    tsvin4 = open(wikifrequencyfiles, "rt", encoding='utf-8')
+    tsvin4 = open(wikifrequencyfile, "rt", encoding='utf-8')
     tsvin4 = csv.reader(tsvin4, delimiter=',')
+    tsvin5 = open(numsensesfile, "rt", encoding='utf-8')
+    tsvin5 = csv.reader(tsvin4, delimiter=',')
 
     for row in tsvin:
         sentence_list.append(row)
@@ -279,6 +283,9 @@ def retrieve_data_from_files(sentence_list, candidate_list):
         frequencylist[row[1]] = (row[0], row[2]) # relative rank, raw frequency pair
     for row in tsvin4:
         wiki_frequency_list[row[0]] = (int)(row[1])
+    for row in tsvin5:
+        numsenseslist[row[0]] = (int)(row[1])
+
 
 def main():
     sentence_list = list()
