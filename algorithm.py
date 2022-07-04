@@ -110,30 +110,37 @@ def frequencymetric(candidate, num_words):
 def numberofsensesmetric(candidate, numberofwords):
     complexity = 0
     numberofmeanings = 0
-    dictionaryentry = requests.get(dictionaryapi + candidate)
-    if dictionaryentry.status_code == 200:
-        for i in range(len(dictionaryentry.json()[0]['meanings'])):
-            numberofmeanings += len(dictionaryentry.json()[0]['meanings'][i]['definitions'])
-        if numberofmeanings >= 4 and numberofmeanings <= 5:
-            complexity = 1
-        elif numberofmeanings >= 6 and numberofmeanings <= 7:
-            complexity = 2
-        elif numberofmeanings >= 8 and numberofmeanings <= 9:
-            complexity = 3
-        elif numberofmeanings >= 10 and numberofmeanings <= 12:
-            complexity = 4
-        elif numberofmeanings >= 13 and numberofmeanings <= 16:
-            complexity = 5
-        elif numberofmeanings >= 17 and numberofmeanings <= 20:
-            complexity = 6
-        elif numberofmeanings >= 21 and numberofmeanings <= 23:
-            complexity = 7
-        elif numberofmeanings >= 24 and numberofmeanings <= 27:
-            complexity = 8
-        elif numberofmeanings >= 28 and numberofmeanings <= 30:
-            complexity = 9
-        elif numberofmeanings >= 31:
-            complexity = 10
+
+    if not candidate in numsenseslist:
+        dictionaryentry = requests.get(dictionaryapi + candidate)
+        if dictionaryentry.status_code == 200:
+            for i in range(len(dictionaryentry.json()[0]['meanings'])):
+                numberofmeanings += len(dictionaryentry.json()[0]['meanings'][i]['definitions'])
+    else:
+        numberofmeanings = numsenseslist[candidate]
+
+    if numberofmeanings <= 3:
+        complexity = 0
+    elif numberofmeanings >= 4 and numberofmeanings <= 5:
+        complexity = 1
+    elif numberofmeanings >= 6 and numberofmeanings <= 7:
+        complexity = 2
+    elif numberofmeanings >= 8 and numberofmeanings <= 9:
+        complexity = 3
+    elif numberofmeanings >= 10 and numberofmeanings <= 12:
+        complexity = 4
+    elif numberofmeanings >= 13 and numberofmeanings <= 16:
+        complexity = 5
+    elif numberofmeanings >= 17 and numberofmeanings <= 20:
+        complexity = 6
+    elif numberofmeanings >= 21 and numberofmeanings <= 23:
+        complexity = 7
+    elif numberofmeanings >= 24 and numberofmeanings <= 27:
+        complexity = 8
+    elif numberofmeanings >= 28 and numberofmeanings <= 30:
+        complexity = 9
+    elif numberofmeanings >= 31:
+        complexity = 10
     else:
         # TODO: handle case where not in dictionary
         if numberofwords == 1:
@@ -174,6 +181,7 @@ def rankingmetric(target, candidate, context):
     if numberofwords >= 3:
         complexity += 1
     complexity += 1 * frequencymetric(candidate, numberofwords)
+    complexity += 0 * numberofsensesmetric(candidate, numberofwords)
 
     # number of meanings
     # complexity += numberofsensesmetric(candidate, numberofwords)
@@ -273,7 +281,7 @@ def retrieve_data_from_files(sentence_list, candidate_list):
     tsvin4 = open(wikifrequencyfile, "rt", encoding='utf-8')
     tsvin4 = csv.reader(tsvin4, delimiter=',')
     tsvin5 = open(numsensesfile, "rt", encoding='utf-8')
-    tsvin5 = csv.reader(tsvin4, delimiter=',')
+    tsvin5 = csv.reader(tsvin5, delimiter=',')
 
     for row in tsvin:
         sentence_list.append(row)

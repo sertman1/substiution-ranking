@@ -1,62 +1,196 @@
 take, 65
+round, 64
 run, 63
+break, 60
+drop, 55
 go, 54
+gone, 52
+down, 52
+flat, 51
+make, 49
+running, 49
+out, 46
 set, 44
 base, 43
+line, 43
+jump, 43
 clear, 42
 block, 42
 frame, 40
+top, 40
+beat, 40
 sharp, 39
 bar, 39
 cover, 39
+loads, 39
 do, 38
+wash, 38
+load, 38
+short, 38
+throw, 37
 get, 36
 black, 36
+split, 35
+lower, 35
 cross, 34
+worst, 34
+blue, 34
+bounce, 34
+strike, 34
+carry, 34
+front, 33
 pick up, 32
 low, 32
 high, 32
+return, 32
+spread, 31
+bull, 31
+straight, 31
+shift, 31
+by, 30
+heavy, 30
+weight, 30
+ground, 30
+register, 30
 positive, 29
 level, 29
 order, 29
+charge, 29
+stock, 29
+off, 29
+soft, 29
+hold, 29
 stay, 28
 side, 28
+figure, 28
+mark, 28
 shadow, 27
 lay, 27
 hand, 27
 stand, 26
+force, 26
+hit, 26
+smooth, 26
+bump, 26
+pop, 26
+push, 26
+stop, 26
 show, 25
 patch, 25
 rough, 25
+regular, 25
 natural, 24
 stretch, 24
+bound, 24
+dump, 24
+land, 24
 rod, 23
 negative, 23
 fair, 23
 hard, 23
+highest, 23
+big, 23
+fat, 23
+fit, 23
+period, 23
+alive, 23
+over, 23
 great, 22
 trim, 22
 outside, 22
 bad, 22
+wind, 22
+dash, 22
+clean, 22
+dry, 22
+fresh, 22
+fixed, 22
+solid, 22
+stroke, 22
 support, 21
 fail, 21
+attack, 21
+bundle, 21
+centre, 21
+bug, 21
+link, 21
+form, 21
+hammer, 21
+purple, 21
+brush, 21
+shoot, 21
+lug, 21
+absolute, 21
+even, 21
 resolve, 20
 striking, 20
 resting, 20
 flow, 20
+behind, 20
+give, 20
+about, 20
+tap, 20
+living, 20
+breathing, 20
+temper, 20
+tone, 20
+stress, 20
+give , 20
+fitting, 20
+section, 20
 platform, 19
 edge, 19
+air, 19
+business, 19
+new, 19
+spill, 19
+type, 19
+age, 19
+grade, 19
+fast, 19
+quick, 19
+brief, 19
+finger, 19
+common, 19
 near, 18
 fix, 18
 sit, 18
 dirty, 18
 part, 18
 against, 18
+bit, 18
+shine, 18
+practice, 18
+target, 18
+strong, 18
+but, 18
+grey, 18
+command, 18
+address, 18
+ring, 18
+term, 18
+near , 18
 wild, 17
 free, 17
 general, 17
 aspect, 17
 divide, 17
+private, 17
+job, 17
+revert, 17
+passage, 17
+college, 17
+strongest, 17
+bulk, 17
+aggregate, 17
+match, 17
+game, 17
+station, 17
+raw, 17
+group, 17
+tune, 17
+away, 17
+pack, 17
 light, 16
 shining, 16
 simple, 16
@@ -65,6 +199,31 @@ so, 16
 put, 16
 half, 16
 fringe, 16
+gas, 16
+social, 16
+scrape, 16
+pile, 16
+lots, 16
+heart, 16
+special, 16
+around, 16
+miss, 16
+character, 16
+real, 16
+people, 16
+still, 16
+breed, 16
+time, 16
+report, 16
+slight, 16
+purchase, 16
+skip, 16
+acute, 16
+following, 16
+bore, 16
+label, 16
+band, 16
+domain, 16
 deep, 15
 cool, 15
 full, 15
@@ -74,6 +233,24 @@ rest, 15
 training, 15
 use, 15
 tell, 15
+purge, 15
+remove, 15
+boring, 15
+post, 15
+retrieve, 15
+means, 15
+fault, 15
+warrant, 15
+splash, 15
+cage, 15
+naked, 15
+standard, 15
+true, 15
+seizing, 15
+now, 15
+later, 15
+extended, 15
+thin, 15
 picture, 14
 pole, 14
 find, 14
@@ -84,6 +261,29 @@ gall, 14
 lie, 14
 chair, 14
 surface, 14
+there, 14
+run out, 14
+dull, 14
+repeat, 14
+radiate, 14
+rising, 14
+stag, 14
+girl, 14
+active, 14
+connected, 14
+feeling, 14
+mode, 14
+crossing, 14
+lot, 14
+survey, 14
+casual, 14
+hop, 14
+concrete, 14
+ruin, 14
+leap, 14
+decline, 14
+wide, 14
+foreign, 14
 small, 13
 stretched, 13
 secure, 13
@@ -101,6 +301,30 @@ dread, 13
 just, 13
 broad, 13
 flank, 13
+empty, 13
+late, 13
+latest, 13
+only, 13
+particular, 13
+sense, 13
+respect, 13
+knowledge, 13
+easy, 13
+volume, 13
+fence, 13
+blessed, 13
+sorted, 13
+trace, 13
+point, 13
+stealing, 13
+note, 13
+gentle, 13
+know, 13
+stir, 13
+meet, 13
+local, 13
+put down, 13
+pause, 13
 bright, 12
 production, 12
 feel, 12
@@ -117,6 +341,36 @@ tough, 12
 function, 12
 complete, 12
 bank, 12
+reason, 12
+blast, 12
+demand, 12
+ask, 12
+car, 12
+filled, 12
+join, 12
+way, 12
+booming, 12
+nonsense, 12
+standing, 12
+charged, 12
+crowd, 12
+body, 12
+stake, 12
+right, 12
+variety, 12
+sort, 12
+instance, 12
+distance, 12
+check, 12
+little, 12
+knock, 12
+gain, 12
+below, 12
+attached, 12
+burst, 12
+train, 12
+troop, 12
+weigh, 12
 gather, 11
 cramped, 11
 slab, 11
@@ -135,6 +389,49 @@ measured, 11
 moderate, 11
 fill, 11
 avoid, 11
+wipe, 11
+carriage, 11
+coach, 11
+entire, 11
+mound, 11
+heap, 11
+lump, 11
+other, 11
+wave, 11
+send, 11
+lay down, 11
+allow, 11
+express, 11
+yield, 11
+of, 11
+error, 11
+large, 11
+massive, 11
+showing, 11
+host, 11
+equal, 11
+couple, 11
+mail, 11
+angel, 11
+quiet, 11
+honest, 11
+pure, 11
+vertical, 11
+burden, 11
+property, 11
+conservative, 11
+minor, 11
+rank, 11
+bear, 11
+pat, 11
+account, 11
+access, 11
+deliver, 11
+descend, 11
+party, 11
+deliver , 11
+field, 11
+shallow, 11
 brilliant, 10
 accept, 10
 collect, 10
@@ -153,6 +450,61 @@ poison, 10
 extend, 10
 perspective, 10
 facet, 10
+cordial, 10
+friendly, 10
+rectify, 10
+finish, 10
+win, 10
+transport, 10
+tons, 10
+collection, 10
+succeeding, 10
+reflex, 10
+advance, 10
+outstanding, 10
+crap, 10
+woman, 10
+happy, 10
+constant, 10
+live, 10
+event, 10
+modality, 10
+mobile, 10
+appointment, 10
+refreshing, 10
+static, 10
+strain, 10
+occasion, 10
+here, 10
+depart, 10
+azure, 10
+progressive, 10
+liberal, 10
+lightweight, 10
+reserve, 10
+swift, 10
+prompt, 10
+keen, 10
+visit, 10
+witness, 10
+dodge, 10
+substantive, 10
+compelling, 10
+contact, 10
+trusted, 10
+critical, 10
+incorporate, 10
+explode, 10
+dial, 10
+trailer, 10
+company, 10
+trailer , 10
+certain, 10
+unload, 10
+text, 10
+expanded, 10
+box, 10
+sphere, 10
 clever, 9
 saloon, 9
 cure, 9
@@ -169,6 +521,50 @@ grub, 9
 awful, 9
 foul, 9
 team, 9
+breeze, 9
+levy, 9
+recharge, 9
+fly, 9
+matter, 9
+original, 9
+further, 9
+younger, 9
+extra, 9
+sound, 9
+settle, 9
+shed, 9
+exclusive, 9
+fashion, 9
+route, 9
+far, 9
+craze, 9
+growing, 9
+schooling, 9
+learning, 9
+substantial, 9
+stout, 9
+equivalent, 9
+choice, 9
+disposition, 9
+outlook, 9
+calm, 9
+unbent, 9
+moment, 9
+day, 9
+sad, 9
+humanitarian, 9
+trivial, 9
+plan, 9
+commission, 9
+influence, 9
+take on, 9
+file, 9
+barge, 9
+laden, 9
+overflow, 9
+traveller, 9
+conclude, 9
+outright, 9
 risk, 8
 last, 8
 consider, 8
@@ -204,6 +600,73 @@ view, 8
 contingent, 8
 inform, 8
 shocking, 8
+citizen, 8
+public, 8
+state, 8
+personal, 8
+community, 8
+restore, 8
+wash up, 8
+bus, 8
+parched, 8
+wry, 8
+maximum, 8
+mess, 8
+wreck, 8
+assignment, 8
+functional, 8
+career, 8
+tardy, 8
+older, 8
+provide, 8
+scatter, 8
+quality, 8
+premium, 8
+kind, 8
+lovely, 8
+manner, 8
+journey, 8
+regarding, 8
+rubbish, 8
+overweight, 8
+rather, 8
+operative, 8
+correspondence, 8
+pairing, 8
+bout, 8
+marriage, 8
+vibe, 8
+message, 8
+sterling, 8
+plain, 8
+music, 8
+space, 8
+garden , 8
+garden, 8
+terrace, 8
+removing, 8
+openhanded, 8
+mild, 8
+entertaining, 8
+next, 8
+rapid, 8
+stable, 8
+pronounced, 8
+potent, 8
+sustain, 8
+rap, 8
+finance, 8
+ledger, 8
+sensitive, 8
+initiate, 8
+name, 8
+camping, 8
+clutch, 8
+directly, 8
+terminate, 8
+go through, 8
+horizontal, 8
+downright, 8
 good, 7
 film, 7
 apparatus, 7
@@ -235,6 +698,91 @@ work, 7
 ally, 7
 you, 7
 area, 7
+reckon, 7
+imagine, 7
+current, 7
+domestic, 7
+individual, 7
+whole, 7
+gathered, 7
+overflowing, 7
+task, 7
+contract, 7
+beep, 7
+rhythm, 7
+phrase, 7
+dismiss, 7
+allay, 7
+really, 7
+realize, 7
+pass, 7
+distinguished, 7
+method, 7
+how, 7
+concerning, 7
+defect, 7
+germ, 7
+problem, 7
+cow, 7
+document, 7
+child, 7
+comfortable, 7
+effective, 7
+laboured, 7
+in place, 7
+animate, 7
+circulated, 7
+online, 7
+accumulation, 7
+throng, 7
+contest, 7
+rival, 7
+mood, 7
+speech, 7
+pound, 7
+store, 7
+kennel, 7
+thump, 7
+serene, 7
+in order, 7
+pressure, 7
+tension, 7
+interval, 7
+repel, 7
+sapphire, 7
+depressed, 7
+submit, 7
+search, 7
+pale , 7
+pale, 7
+faint, 7
+request, 7
+hurried, 7
+convincing, 7
+robust, 7
+intense, 7
+drum, 7
+appoint, 7
+deserving, 7
+facility, 7
+fund, 7
+narrative, 7
+underneath, 7
+guide, 7
+create, 7
+vehicle, 7
+email, 7
+ditch, 7
+abandon, 7
+accessible, 7
+possible, 7
+enlarged, 7
+elongated, 7
+augmented, 7
+licence, 7
+province, 7
+environment, 7
+plane, 7
 gleam, 6
 include, 6
 grasp, 6
@@ -277,6 +825,90 @@ contradict, 6
 execute, 6
 dreadful, 6
 poignant, 6
+fart, 6
+impose, 6
+ordinary, 6
+tutor, 6
+deadpan, 6
+role, 6
+duty, 6
+employment, 6
+different, 6
+distinct, 6
+energy, 6
+propose, 6
+very, 6
+regress, 6
+produce, 6
+discard, 6
+transmit, 6
+disperse, 6
+peculiar, 6
+direction, 6
+discussed, 6
+fever, 6
+male, 6
+stud, 6
+female, 6
+she, 6
+minimum, 6
+decent, 6
+mass, 6
+climax, 6
+quantity, 6
+magnitude, 6
+extent, 6
+counterpart, 6
+humour, 6
+temperament, 6
+situation, 6
+enclosure, 6
+exposed, 6
+martyr, 6
+forthright, 6
+linear, 6
+continuous, 6
+epoch, 6
+chance, 6
+yard, 6
+depot, 6
+surrounding, 6
+apart, 6
+absent, 6
+admit, 6
+advise, 6
+portable, 6
+mandate, 6
+maybe, 6
+ever, 6
+immediate, 6
+learn, 6
+experience, 6
+soon, 6
+valid, 6
+hardy, 6
+concentrated, 6
+milk, 6
+affect, 6
+description, 6
+consideration, 6
+procure, 6
+achieve, 6
+convey, 6
+institute, 6
+rupture, 6
+deflate, 6
+bristle, 6
+dub, 6
+camper, 6
+accomplish, 6
+definite, 6
+adjacent, 6
+protracted, 6
+outer, 6
+discipline, 6
+region, 6
+deflated, 6
 intelligent, 5
 promising, 5
 happen, 5
@@ -328,6 +960,86 @@ instruct, 5
 explain, 5
 describe, 5
 impart, 5
+terrifying, 5
+guess, 5
+suppose, 5
+this, 5
+remedy, 5
+trainer, 5
+counsellor, 5
+generous, 5
+recent, 5
+delayed, 5
+hardly, 5
+heartbeat, 5
+throbbing, 5
+collate, 5
+take back, 5
+earn, 5
+reveal, 5
+discarding, 5
+unique, 5
+tailored, 5
+valued, 5
+characteristic, 5
+virus, 5
+instruction, 5
+gal, 5
+excellent, 5
+fun, 5
+competent, 5
+esteem, 5
+frequent, 5
+majority, 5
+shock, 5
+association, 5
+allophone, 5
+lookout, 5
+unfair, 5
+sudden, 5
+canonised, 5
+disciple, 5
+hushed, 5
+consecutive, 5
+extraction, 5
+effort, 5
+deadline, 5
+ahead, 5
+unhappy, 5
+shady, 5
+facile, 5
+since, 5
+behold, 5
+sharply, 5
+pass over, 5
+cemented, 5
+rigid, 5
+sturdy, 5
+powerful, 5
+suffer, 5
+syphon, 5
+draw on, 5
+tinge, 5
+worthy, 5
+righteous, 5
+bring in, 5
+included, 5
+generate, 5
+depress, 5
+fracture, 5
+designate, 5
+entitle, 5
+cavalcade, 5
+contain, 5
+fulfil, 5
+transparent, 5
+patent, 5
+together, 5
+persist, 5
+prolonged, 5
+exterior, 5
+speciality, 5
+pitch, 5
 vibrant, 4
 vivid, 4
 alight, 4
@@ -373,6 +1085,109 @@ sprint, 4
 go against, 4
 rush, 4
 assure, 4
+deplorable, 4
+abhorrent, 4
+recommend, 4
+analyse, 4
+hence, 4
+require, 4
+storm, 4
+accuse, 4
+cost, 4
+civil, 4
+internal, 4
+cultured, 4
+accumulate, 4
+teacher, 4
+evaporate, 4
+understated, 4
+teetotal, 4
+desiccated, 4
+voluminous, 4
+generally, 4
+purely, 4
+emanation, 4
+pulse, 4
+stimulus, 4
+throb, 4
+vibration, 4
+absolutely, 4
+bring back, 4
+come back, 4
+go back, 4
+cast off, 4
+moult, 4
+relinquish, 4
+exceptional, 4
+extraordinary, 4
+treasured, 4
+some, 4
+somewhat, 4
+surveillance, 4
+addiction, 4
+suitor, 4
+happiness, 4
+favourable, 4
+healthy, 4
+thorough, 4
+extensive, 4
+powered, 4
+density, 4
+atmosphere, 4
+telephone, 4
+dollar, 4
+prison, 4
+saint, 4
+stationary, 4
+arranged, 4
+candid, 4
+instant, 4
+allotment, 4
+metre, 4
+encircling, 4
+all over, 4
+head off, 4
+along, 4
+aside, 4
+elsewhere, 4
+examine, 4
+select, 4
+liberated, 4
+ethereal, 4
+presently, 4
+today, 4
+observe, 4
+distinguish, 4
+establish, 4
+shortly, 4
+skitter, 4
+utilise, 4
+mention, 4
+get to, 4
+deserved, 4
+statement, 4
+asset, 4
+amass, 4
+emergency, 4
+beneath, 4
+introduce, 4
+burgeon, 4
+caravan, 4
+convoy, 4
+crocodile, 4
+deploy, 4
+lucid, 4
+proximate, 4
+decrease, 4
+set down, 4
+straightforward, 4
+less, 4
+increased, 4
+expansive, 4
+holder, 4
+activity, 4
+subject, 4
+lifeless, 4
 smart, 3
 colourful, 3
 motivated, 3
@@ -442,6 +1257,121 @@ shore, 3
 notify, 3
 recount, 3
 atrocious, 3
+frightening, 3
+gust, 3
+whirlwind, 3
+elected, 3
+polite, 3
+benevolent, 3
+cleanse, 3
+prosper, 3
+purify, 3
+arid, 3
+droll, 3
+stodgy, 3
+all out, 3
+another, 3
+modern, 3
+sometimes, 3
+occasionally, 3
+barely, 3
+just now, 3
+singularly, 3
+legume, 3
+assemble, 3
+nullify, 3
+truly, 3
+honestly, 3
+totally, 3
+revisit, 3
+retrace, 3
+resume, 3
+abnormal, 3
+atypical, 3
+anomalous, 3
+wonderful, 3
+selected, 3
+eminent, 3
+incidentally, 3
+technique, 3
+roughly, 3
+arise, 3
+gremlin, 3
+insect, 3
+obsession, 3
+tuition, 3
+intellect, 3
+educated, 3
+pleasant, 3
+satisfactory, 3
+considerable, 3
+respectable, 3
+beneficial, 3
+aggressive, 3
+weighty, 3
+alternately, 3
+performing, 3
+viewable, 3
+critical point, 3
+proletariat, 3
+correlation, 3
+competition, 3
+partnership, 3
+timbre, 3
+telecommunication, 3
+post office, 3
+announcement, 3
+uncooked, 3
+paladin, 3
+peaceful, 3
+accurate, 3
+anxiety, 3
+juncture, 3
+opportunity, 3
+lawn, 3
+apparently, 3
+evidently, 3
+clearly, 3
+rebuff, 3
+melancholy, 3
+speculative, 3
+confirm, 3
+verify, 3
+investigate, 3
+plentiful, 3
+left wing, 3
+frothy, 3
+upbeat, 3
+equally , 3
+likewise, 3
+equally, 3
+instantly, 3
+perhaps, 3
+reasonably, 3
+speedy, 3
+find out, 3
+understand, 3
+briefly, 3
+prance, 3
+firm, 3
+vigorous, 3
+masterful, 3
+resolute, 3
+infect, 3
+creditable, 3
+charitable, 3
+explanation, 3
+synopsis, 3
+subscription, 3
+grave, 3
+heightened, 3
+erupt, 3
+apparent, 3
+contiguous, 3
+forgo , 3
+deselect, 3
+resource, 3
+flush, 3
 luminous, 2
 capable, 2
 skilled, 2
@@ -507,6 +1437,159 @@ conversely, 2
 communicate, 2
 narrate, 2
 horrifying, 2
+fearsome, 2
+contemplate, 2
+thus, 2
+therefore, 2
+accordingly, 2
+consequently, 2
+wind power, 2
+flatulence, 2
+vagary, 2
+indict, 2
+civic, 2
+inoffensive, 2
+thoughtful, 2
+freshen up, 2
+drought, 2
+facetious, 2
+impassive, 2
+category, 2
+piece of work, 2
+last minute, 2
+additional, 2
+novel, 2
+regularly, 2
+often, 2
+frequently, 2
+commonly, 2
+usually, 2
+habitually, 2
+merely, 2
+lifeblood, 2
+fasten, 2
+unquestionably, 2
+definitely, 2
+actually, 2
+effectively, 2
+completely, 2
+softly, 2
+finely, 2
+delicately, 2
+slightly, 2
+magical, 2
+important, 2
+remarkable, 2
+more or less, 2
+here and there, 2
+infection, 2
+education, 2
+teaching, 2
+lass, 2
+amiable, 2
+well behaved, 2
+strongly, 2
+intensely, 2
+sufficiently, 2
+violently, 2
+profuse, 2
+wieldy, 2
+alternatively, 2
+performed, 2
+existent, 2
+realtime, 2
+sustainable, 2
+populace, 2
+conglomeration, 2
+expanse, 2
+multitude, 2
+matchstick, 2
+competitor, 2
+ambience, 2
+phone, 2
+cellular, 2
+handset, 2
+date, 2
+electronic mail, 2
+lb, 2
+kilogram, 2
+kilo, 2
+quid, 2
+uncompressed, 2
+austere, 2
+genuine, 2
+goodman, 2
+prophet, 2
+unmoving, 2
+unruffled, 2
+tranquil, 2
+undiluted, 2
+unadulterated, 2
+heterosexual, 2
+undeviating, 2
+unbending, 2
+successive, 2
+truthful, 2
+era, 2
+patio, 2
+playground, 2
+seemingly, 2
+looking, 2
+obviously, 2
+plainly, 2
+everywhere, 2
+confiscate, 2
+distant, 2
+cobalt, 2
+indecent, 2
+make sure, 2
+inspect, 2
+scrutinise, 2
+tolerant, 2
+lenient, 2
+cheerful, 2
+similarly, 2
+immediately, 2
+possibly, 2
+plausibly, 2
+potentially, 2
+concise, 2
+cursory, 2
+expeditious, 2
+quickly, 2
+miss out, 2
+dependable, 2
+resilient, 2
+durable, 2
+persuasive, 2
+take advantage of, 2
+laudable, 2
+honourable, 2
+befitting, 2
+chronicle, 2
+logon, 2
+instigate, 2
+topple, 2
+roadshow, 2
+perform, 2
+understandable, 2
+in detail, 2
+narrowly, 2
+alongside, 2
+refuse, 2
+weaken, 2
+deteriorate, 2
+uncomplicated, 2
+convenient, 2
+lengthened, 2
+lengthy, 2
+comprehensive, 2
+acreage, 2
+battleground, 2
+investigative, 2
+geographical, 2
+frontward, 2
+move on, 2
 up-and-coming, 1
 talented, 1
 tolerate, 1
@@ -560,6 +1643,140 @@ justifiable, 1
 unfinished, 1
 standpoint, 1
 instead, 1
+courteous, 1
+nongovernmental, 1
+well mannered, 1
+tidy up, 1
+make a fortune, 1
+disinfect, 1
+instructor, 1
+uninteresting, 1
+unsympathetic, 1
+tongue in cheek, 1
+soulless, 1
+assortment, 1
+recently, 1
+lately, 1
+overdue, 1
+latterly, 1
+solely, 1
+uniquely, 1
+exclusively, 1
+nothing but, 1
+heartrate, 1
+propound, 1
+put an end to, 1
+genuinely, 1
+exceptionally, 1
+unreservedly, 1
+emit, 1
+get rid of, 1
+gently, 1
+faintly, 1
+quietly, 1
+lightly, 1
+subtly, 1
+tenderly, 1
+memorable, 1
+edict, 1
+erudition, 1
+friendliness, 1
+enjoyable, 1
+commendable, 1
+reputation, 1
+intently, 1
+persistently, 1
+forcefully, 1
+strenuously, 1
+diligently, 1
+intensively, 1
+keenly, 1
+determinedly, 1
+earnestly, 1
+tightly, 1
+fiercely, 1
+excessive, 1
+onerous, 1
+costly, 1
+tedious, 1
+in lieu, 1
+as it happens, 1
+demeanour, 1
+mindset, 1
+frame of mind, 1
+phoneme, 1
+mobile phone, 1
+mobile telephone, 1
+telecom, 1
+mail carrier, 1
+unprocessed, 1
+untreated, 1
+unsophisticated, 1
+unspoilt, 1
+motionless, 1
+undistorted, 1
+unswerving, 1
+uninterrupted, 1
+melody, 1
+exertion, 1
+allocation, 1
+courtyard, 1
+ostensibly, 1
+supposedly, 1
+palpably, 1
+manifestly, 1
+continuously, 1
+repeatedly, 1
+afar, 1
+pornographic, 1
+tick, 1
+take notice, 1
+hand in, 1
+free market, 1
+noninterventionist, 1
+undemanding, 1
+inconsiderable, 1
+unsubstantial, 1
+correspondingly, 1
+additionally, 1
+currently, 1
+nowadays, 1
+these days, 1
+conceivably, 1
+feasibly, 1
+necessarily, 1
+hasty, 1
+perceive, 1
+abruptly, 1
+eschew, 1
+forceful, 1
+put up with, 1
+reputable, 1
+admirable, 1
+worthwhile, 1
+suitable, 1
+bank balance, 1
+subscriber, 1
+urgent, 1
+contribute, 1
+enthusiastic, 1
+mobile home, 1
+obvious, 1
+unambiguous, 1
+unmistakable, 1
+distinctly, 1
+unobscured, 1
+neighbouring, 1
+attentively, 1
+scrupulously, 1
+intimately, 1
+collectively, 1
+jointly, 1
+neatly, 1
+leave out, 1
+discontinue, 1
+carefree, 1
+field of vision, 1
 well-lit, 0
 most able, 0
 most talented, 0
@@ -691,3 +1908,500 @@ inform me of, 0
 let me know, 0
 convey to, 0
 very bad, 0
+be of the opinion, 0
+in this manner, 0
+in this way, 0
+air current, 0
+air flow, 0
+natural air movement, 0
+accuse of, 0
+charge up, 0
+supply electricity, 0
+sell for, 0
+accuse having, 0
+rush at, 0
+noncriminal, 0
+ordinary private, 0
+people's, 0
+citizens', 0
+spruce up, 0
+profit greatly, 0
+travel bus, 0
+rainless, 0
+become empty, 0
+waterless, 0
+low key, 0
+alcohol free, 0
+unmoistened, 0
+replete with, 0
+brimming with, 0
+filled with, 0
+ruched, 0
+covered with, 0
+crammed with, 0
+loaded with, 0
+a lot, 0
+untidy pile, 0
+well into, 0
+at a later hour, 0
+after the usual time, 0
+behind time, 0
+after normal time, 0
+behind schedule, 0
+near the end of, 0
+near end, 0
+far on, 0
+at the end of the, 0
+end of, 0
+latter part of, 0
+end of the, 0
+not on time, 0
+At the end of the, 0
+after the usual, 0
+after the normal time, 0
+older than the norm, 0
+at a later stage, 0
+recently acquired, 0
+recently started, 0
+recurrently, 0
+at times, 0
+no more than, 0
+simply to, 0
+heartbeat rate, 0
+edible seed, 0
+hearbeat, 0
+give to, 0
+in fact, 0
+give back, 0
+send back, 0
+respond to, 0
+reply to, 0
+get back, 0
+go back to, 0
+give off, 0
+daintily, 0
+indifferently, 0
+specifically designed, 0
+while on the subject, 0
+what the result would be, 0
+concerned with, 0
+dealing with, 0
+cope with, 0
+surveillance device, 0
+listening device, 0
+spying device, 0
+code defect, 0
+coding error, 0
+become obsessed with, 0
+bovine animal, 0
+male cow, 0
+male bovine, 0
+adult male, 0
+fearlessly tackled the problem, 0
+adult male cow, 0
+grasped the nettle, 0
+act decisively, 0
+be accurate, 0
+powerful male, 0
+centre circle, 0
+bulls eye, 0
+load of rubbish, 0
+bringing up, 0
+female children, 0
+female child, 0
+young woman, 0
+young female, 0
+at least, 0
+cordiality, 0
+well regarded, 0
+arduously, 0
+wide ranging, 0
+most intense, 0
+most abundant, 0
+as an alternative, 0
+in preference, 0
+rather than, 0
+in preference to, 0
+in its place, 0
+in place of this, 0
+as it happened, 0
+in real time, 0
+on the spot, 0
+critical level, 0
+crucial level, 0
+common people, 0
+main population, 0
+ordinary people, 0
+the celebration of the Eucharist, 0
+the Eucharist, 0
+the service, 0
+state of mind, 0
+feel like writing, 0
+sonant, 0
+phonetic unit, 0
+sound unit, 0
+postal service, 0
+electronic bulletin, 0
+the job, 0
+16 ounces , 0
+sixteen ounces, 0
+11.27 kilograms , 0
+per ounces, 0
+twelve shillings, 0
+unspun, 0
+poor treatment, 0
+harsh deal, 0
+unfair deal, 0
+bloody, 0
+open, 0
+excoriated, 0
+undressed, 0
+inexperienced, 0
+untaught, 0
+immature, 0
+residual, 0
+leftover, 0
+remainder, 0
+balance, 0
+residue, 0
+second hand, 0
+surplus, 0
+cut price, 0
+leftover part, 0
+primitive, 0
+rude, 0
+impolite, 0
+ill mannered, 0
+disrespectful, 0
+unkind, 0
+abusive, 0
+abrupt, 0
+savage, 0
+surprise, 0
+awkward, 0
+lewd, 0
+naughty, 0
+vulgar, 0
+insulting, 0
+canonised person, 0
+holy person, 0
+holy man, 0
+holy woman, 0
+not windy, 0
+windless, 0
+nonmoving, 0
+nondeviating, 0
+uncurving, 0
+uncrooked, 0
+in a row, 0
+uncurved, 0
+the Victorian period, 0
+a chance, 0
+sixty feet, 0
+several feet, 0
+work area, 0
+cul de sac, 0
+it seems, 0
+in the vicinity, 0
+back on itself, 0
+through out the world, 0
+and removing it, 0
+with impunity, 0
+distancing themselves, 0
+in the future, 0
+pale grey, 0
+look at, 0
+dealt with, 0
+process, 0
+eliminate, 0
+change, 0
+brighten, 0
+unblock, 0
+unobstruct, 0
+cut down, 0
+move away, 0
+open up, 0
+above, 0
+get above, 0
+skim, 0
+cash, 0
+be authorised, 0
+be freed, 0
+release, 0
+take away, 0
+move, 0
+exonerate, 0
+absolve, 0
+acquit, 0
+vindicate, 0
+authorise, 0
+pardon, 0
+end, 0
+conclusion, 0
+finale, 0
+shutdown, 0
+shut, 0
+ending, 0
+turn up, 0
+arrive, 0
+come, 0
+unite, 0
+combine, 0
+rally, 0
+arrive at, 0
+considering, 0
+be about, 0
+concern, 0
+be connected with, 0
+we consider, 0
+proposed by, 0
+originate, 0
+emanate , 0
+reach, 0
+be not organised, 0
+take place, 0
+spring to mind, 0
+spring, 0
+enter my, 0
+occur to one, 0
+arrive , 0
+lever, 0
+fall, 0
+fall off, 0
+chance upon, 0
+encounter, 0
+notice, 0
+cry, 0
+bawl, 0
+weep, 0
+snivel, 0
+wail, 0
+shriek, 0
+shout, 0
+call, 0
+yell, 0
+exclaim, 0
+sob, 0
+tear, 0
+utter, 0
+complain, 0
+fire, 0
+lay off, 0
+sack, 0
+discharge, 0
+reject, 0
+deride, 0
+let out, 0
+excuse, 0
+send away, 0
+banish, 0
+dispatch, 0
+summon, 0
+attract, 0
+bring, 0
+draw, 0
+focus, 0
+acquire, 0
+extract, 0
+pull, 0
+employ, 0
+make use of, 0
+take from, 0
+exploit, 0
+consult, 0
+sketch, 0
+paint, 0
+depict, 0
+portray, 0
+claim, 0
+receive, 0
+derive, 0
+lead to, 0
+haul, 0
+drag, 0
+withdraw, 0
+choose, 0
+tie, 0
+play, 0
+schedule, 0
+pit, 0
+initially, 0
+earlier, 0
+before, 0
+previously, 0
+formerly, 0
+prior to that, 0
+beforehand, 0
+by then, 0
+sooner, 0
+in advance, 0
+in advance of, 0
+sooner than, 0
+ahead of, 0
+in previous times, 0
+before this, 0
+entirely, 0
+altogether, 0
+fully, 0
+wholly, 0
+utterly, 0
+forth, 0
+on, 0
+and the like, 0
+to and fro, 0
+backwards and forwards, 0
+back and forth, 0
+forwards, 0
+forward, 0
+put forward, 0
+across, 0
+into view, 0
+outward, 0
+onwards, 0
+onward, 0
+go out, 0
+etcetera, 0
+make known, 0
+bring out, 0
+impertinent, 0
+uncontaminated, 0
+airy, 0
+undimmed, 0
+relevant, 0
+nonfrozen, 0
+uncanned, 0
+travel, 0
+walk, 0
+travel down, 0
+set off, 0
+aim, 0
+try, 0
+attempt, 0
+approach, 0
+engage in, 0
+relax, 0
+loose, 0
+forgive, 0
+let, 0
+permit, 0
+agree to, 0
+have, 0
+rent, 0
+hire, 0
+lease, 0
+lessen, 0
+slacken, 0
+diminish, 0
+reduce, 0
+expel, 0
+inform people, 0
+tell people, 0
+free thinking, 0
+open minded, 0
+broad minded, 0
+easily digested, 0
+unheavy, 0
+not heavy, 0
+small amounts of, 0
+less serious, 0
+of little weight, 0
+the same, 0
+of late, 0
+as a result, 0
+at present, 0
+at this time, 0
+at this point, 0
+at this stage, 0
+the present, 0
+this time, 0
+this moment, 0
+this point, 0
+put in order, 0
+apply for, 0
+believably, 0
+at all, 0
+waste no time in, 0
+almost immediately, 0
+not long, 0
+before long, 0
+brusquely, 0
+curtly, 0
+a little, 0
+jump over, 0
+fail once, 0
+well stocked, 0
+highly flavoured, 0
+full bodied, 0
+be subjected to, 0
+appeal to, 0
+draw upon, 0
+touch, 0
+address slightly, 0
+refer to, 0
+skim over, 0
+get involved with, 0
+speak about, 0
+talk about, 0
+come into contact with, 0
+come together with, 0
+lean against, 0
+in contact with, 0
+make contact with, 0
+come together, 0
+come in contact with, 0
+influenced by, 0
+affected by, 0
+banking arrangement, 0
+banking facility, 0
+lower down, 0
+make more like, 0
+make more similar, 0
+restore to, 0
+erupt on to, 0
+explode on to, 0
+arrive on, 0
+erupt on, 0
+explode on, 0
+full to burst, 0
+erupt with laughter, 0
+know as, 0
+describe as, 0
+refer to as, 0
+camp trailer, 0
+house trailer, 0
+be fitted with, 0
+have on them, 0
+unblurred, 0
+in concert, 0
+in unison, 0
+in tandem, 0
+get worse, 0
+left round, 0
+send a letter, 0
+write a letter, 0
+send a message, 0
+let go of, 0
+let fall, 0
+more accessible, 0
+trouble free, 0
+less difficult, 0
+more straightforward, 0
+not difficult, 0
+submit to, 0
+drawn out, 0
+nonlocal, 0
+data item, 0
+area of operation, 0
+on the streets, 0
+categoric, 0
+even surface, 0
+fixed rate, 0
+invariable rate, 0
+excited about, 0
+look ahead to, 0
+to the front, 0
+wait for, 0
+move ahead, 0
+move earlier, 0
+take ahead, 0
+future focused, 0
