@@ -2,6 +2,7 @@ take, 65
 round, 64
 run, 63
 break, 60
+setting, 56
 drop, 55
 go, 54
 gone, 52
@@ -30,6 +31,7 @@ short, 38
 throw, 37
 get, 36
 black, 36
+range, 36
 split, 35
 lower, 35
 cross, 34
@@ -47,11 +49,13 @@ spread, 31
 bull, 31
 straight, 31
 shift, 31
+lift, 31
 by, 30
 heavy, 30
 weight, 30
 ground, 30
 register, 30
+pot, 30
 positive, 29
 level, 29
 order, 29
@@ -64,6 +68,7 @@ stay, 28
 side, 28
 figure, 28
 mark, 28
+pan, 28
 shadow, 27
 lay, 27
 hand, 27
@@ -75,6 +80,7 @@ bump, 26
 pop, 26
 push, 26
 stop, 26
+draw , 26
 show, 25
 patch, 25
 rough, 25
@@ -84,6 +90,7 @@ stretch, 24
 bound, 24
 dump, 24
 land, 24
+act, 24
 rod, 23
 negative, 23
 fair, 23
@@ -107,6 +114,7 @@ fresh, 22
 fixed, 22
 solid, 22
 stroke, 22
+rip, 22
 support, 21
 fail, 21
 attack, 21
@@ -122,6 +130,10 @@ shoot, 21
 lug, 21
 absolute, 21
 even, 21
+radical, 21
+office, 21
+read, 21
+render, 21
 resolve, 20
 striking, 20
 resting, 20
@@ -138,6 +150,9 @@ stress, 20
 give , 20
 fitting, 20
 section, 20
+heave, 20
+convert, 20
+cycle, 20
 platform, 19
 edge, 19
 air, 19
@@ -170,6 +185,8 @@ address, 18
 ring, 18
 term, 18
 near , 18
+squeeze, 18
+stage, 18
 wild, 17
 free, 17
 general, 17
@@ -191,6 +208,9 @@ group, 17
 tune, 17
 away, 17
 pack, 17
+primary, 17
+winning, 17
+park, 17
 light, 16
 shining, 16
 simple, 16
@@ -224,6 +244,10 @@ bore, 16
 label, 16
 band, 16
 domain, 16
+keep, 16
+inside, 16
+green, 16
+cadence, 16
 deep, 15
 cool, 15
 full, 15
@@ -251,6 +275,9 @@ now, 15
 later, 15
 extended, 15
 thin, 15
+wind up, 15
+project, 15
+complex, 15
 picture, 14
 pole, 14
 find, 14
@@ -284,6 +311,10 @@ leap, 14
 decline, 14
 wide, 14
 foreign, 14
+dope, 14
+wrench, 14
+array, 14
+sight, 14
 small, 13
 stretched, 13
 secure, 13
@@ -325,6 +356,12 @@ meet, 13
 local, 13
 put down, 13
 pause, 13
+fetch, 13
+pluck, 13
+limit, 13
+scope, 13
+image, 13
+scale, 13
 bright, 12
 production, 12
 feel, 12
@@ -371,6 +408,13 @@ burst, 12
 train, 12
 troop, 12
 weigh, 12
+relaxed, 12
+inner, 12
+mad, 12
+tub, 12
+leading, 12
+clock, 12
+pattern, 12
 gather, 11
 cramped, 11
 slab, 11
@@ -432,6 +476,14 @@ party, 11
 deliver , 11
 field, 11
 shallow, 11
+under, 11
+official, 11
+letter, 11
+turn, 11
+commit, 11
+selection, 11
+display, 11
+scene, 11
 brilliant, 10
 accept, 10
 collect, 10
@@ -505,6 +557,12 @@ text, 10
 expanded, 10
 box, 10
 sphere, 10
+communication, 10
+objective, 10
+calling, 10
+church, 10
+approaching, 10
+gallery, 10
 clever, 9
 saloon, 9
 cure, 9
@@ -565,6 +623,21 @@ overflow, 9
 traveller, 9
 conclude, 9
 outright, 9
+essential, 9
+underlying, 9
+stand up, 9
+spiritual, 9
+cause, 9
+cause , 9
+mission, 9
+operation, 9
+peeled, 9
+tray, 9
+profound, 9
+tug, 9
+series, 9
+span, 9
+programme, 9
 risk, 8
 last, 8
 consider, 8
@@ -667,6 +740,20 @@ terminate, 8
 go through, 8
 horizontal, 8
 downright, 8
+vital, 8
+spontaneous, 8
+correspondence , 8
+thundering, 8
+evangelical, 8
+quest, 8
+bowl, 8
+penetrating, 8
+salient, 8
+roaming, 8
+lay out, 8
+tempo, 8
+incident, 8
+landscape, 8
 good, 7
 film, 7
 apparatus, 7
@@ -783,6 +870,20 @@ licence, 7
 province, 7
 environment, 7
 plane, 7
+retain, 7
+officer, 7
+loud, 7
+deafening, 7
+imposing, 7
+compel, 7
+outreach, 7
+weed, 7
+vessel, 7
+prize, 7
+intellectual, 7
+foremost, 7
+coverage, 7
+bestow, 7
 gleam, 6
 include, 6
 grasp, 6
@@ -909,6 +1010,24 @@ outer, 6
 discipline, 6
 region, 6
 deflated, 6
+elementary, 6
+inward, 6
+alphabet, 6
+shrill, 6
+rabid, 6
+construct, 6
+purpose, 6
+preaching, 6
+susceptible, 6
+peep, 6
+unlocked, 6
+discerning , 6
+notable, 6
+lure, 6
+more, 6
+fairly, 6
+harmony, 6
+backstage, 6
 intelligent, 5
 promising, 5
 happen, 5
@@ -1040,6 +1159,24 @@ prolonged, 5
 exterior, 5
 speciality, 5
 pitch, 5
+fundamental, 5
+elemental, 5
+convince, 5
+become, 5
+informal, 5
+interior, 5
+enclosed, 5
+missive, 5
+amplified, 5
+help, 5
+charity, 5
+virtually, 5
+available, 5
+gaping, 5
+alert, 5
+wise, 5
+manipulate, 5
+breadth, 5
 vibrant, 4
 vivid, 4
 alight, 4
@@ -1188,6 +1325,28 @@ holder, 4
 activity, 4
 subject, 4
 lifeless, 4
+intrinsic, 4
+central, 4
+necessary, 4
+adhere, 4
+clasp, 4
+cache, 4
+convene, 4
+own, 4
+grip, 4
+clique, 4
+memo, 4
+glyph, 4
+strident, 4
+disturbing, 4
+frantic, 4
+insane, 4
+frenetic, 4
+delegation, 4
+ministering, 4
+yank, 4
+get hold of, 4
+arena, 4
 smart, 3
 colourful, 3
 motivated, 3
@@ -1372,6 +1531,31 @@ forgo , 3
 deselect, 3
 resource, 3
 flush, 3
+persuade, 3
+maintain, 3
+possess, 3
+unofficial, 3
+everyday, 3
+mental, 3
+examiner, 3
+detective, 3
+epistle, 3
+noisy, 3
+resonant, 3
+blaring, 3
+obtrusive, 3
+legation, 3
+arrival, 3
+adjoining, 3
+ajar, 3
+unfastened, 3
+cannabis, 3
+casserole, 3
+ceramic, 3
+prominent, 3
+famous, 3
+encode, 3
+impressive, 3
 luminous, 2
 capable, 2
 skilled, 2
@@ -1590,6 +1774,25 @@ investigative, 2
 geographical, 2
 frontward, 2
 move on, 2
+foundational, 2
+easygoing, 2
+inmost, 2
+focal, 2
+inspector, 2
+conspicuous, 2
+rowdy, 2
+furious, 2
+oratory, 2
+vocation, 2
+unclosed, 2
+receptive, 2
+aware, 2
+unrestricted, 2
+marijuana, 2
+high profile, 2
+noticeable, 2
+prevalent, 2
+moderately, 2
 up-and-coming, 1
 talented, 1
 tolerate, 1
@@ -1777,6 +1980,33 @@ leave out, 1
 discontinue, 1
 carefree, 1
 field of vision, 1
+major, 1
+imprecise, 1
+untrained, 1
+experimenter, 1
+investigator, 1
+researcher, 1
+vociferous, 1
+frenzied, 1
+uncontrolled, 1
+give rise to, 1
+negotiation, 1
+just about, 1
+all but, 1
+sandal, 1
+unobstructed, 1
+approachable, 1
+teapot, 1
+saucepan, 1
+sagacious, 1
+insightful, 1
+renowned, 1
+visible, 1
+stop at nothing, 1
+preferably, 1
+significantly, 1
+time signature, 1
+site, 1
 well-lit, 0
 most able, 0
 most talented, 0
@@ -2405,3 +2635,61 @@ move ahead, 0
 move earlier, 0
 take ahead, 0
 future focused, 0
+look to the future, 0
+anticipative, 0
+travel to, 0
+lacking rigour, 0
+not rigorous, 0
+not prescribed, 0
+commonly used, 0
+innermore, 0
+trusted group, 0
+inquirer, 0
+alphabetic character, 0
+wildly excited, 0
+BSE, 0
+very rapidly, 0
+very quickly, 0
+very fast, 0
+cause to, 0
+enable to, 0
+cause to be, 0
+cause your outer work to be more, 0
+cause to become, 0
+cause a great burden to be, 0
+induce to be, 0
+induce to, 0
+compel me to, 0
+religious preaching, 0
+close at hand, 0
+not closely, 0
+not remotely, 0
+accepting business, 0
+ready for business, 0
+switched on, 0
+unshut, 0
+unpoliced, 0
+unlidded, 0
+pourer, 0
+thought provoking, 0
+far reaching, 0
+deep seated, 0
+in depth, 0
+well known, 0
+widely known, 0
+stop at the side of the road, 0
+stop the car, 0
+tow, 0
+go to any length, 0
+do everything it takes, 0
+try everything, 0
+practice area, 0
+shooting area, 0
+shooting centre, 0
+free run, 0
+complete gamut, 0
+total freedom, 0
+instead of, 0
+more accurately, 0
+regular beat, 0
+regular pattern, 0
