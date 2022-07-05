@@ -9,6 +9,7 @@ frequencyfile = './assets/FrencuenciasEN.csv'
 wikifrequencyfile = './assets/wikifrequencies.csv'
 numsensesfile = './assets/numberofsenses.csv'
 
+
 frequencylist = {}
 wiki_frequency_list = {}
 numsenseslist = {}
@@ -307,7 +308,7 @@ def main():
         if i + 1 != len(sentence_list):
             answer += "\n"
 
-    answerfile = open("./scorerankings/answer.txt", "w")
+    answerfile = open("./scorerankings/trialanswer.txt", "w")
     answerfile.write(answer)
     answerfile.close()
 
