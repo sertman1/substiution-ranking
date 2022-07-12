@@ -8,13 +8,14 @@ candidatefile = './assets/candidatestest.csv'
 frequencyfile = './assets/FrencuenciasEN.csv'
 wikifrequencyfile = './assets/wikifrequencies.csv'
 numsensesfile = './assets/numberofsenses.csv'
+similarityfile = './assets/relativesimilarities.txt'
 
 
 frequencylist = {}
 wiki_frequency_list = {}
 numsenseslist = {}
 
-def lengthmetric(candidate, has_multiple_words):
+def lengthmetric(candidate, numberofwords):
     # complexity = 0
     # wordlength = len(candidate)
     # if wordlength >= 5 and wordlength <= 6:
@@ -27,7 +28,9 @@ def lengthmetric(candidate, has_multiple_words):
     #     complexity = wordlength - 7
         
     wordlength = len(candidate)
-    if wordlength <= 2: # accounts for complicating technical terms, etc. 'x' 'pn'
+    if numberofwords != 1:
+        complexity = wordlength / numberofwords
+    elif wordlength <= 2: # accounts for complicating technical terms, etc. 'x' 'pn'
         complexity = wordlength + 4
     else: 
         complexity = wordlength 
@@ -76,7 +79,7 @@ def raw_freq_metric(candidate):
         elif raw_frequency < 25000:
             complexity = 0.5
     else:
-        complexity = 10
+        complexity = 5
     return complexity
 
 
@@ -89,11 +92,13 @@ def frequencymetric(candidate, num_words):
     if candidate in frequencylist:
         complexity = (int((frequencylist[candidate][0])) / 1000)
     else:
-        complexity = 9
+        complexity = 2
 
     complexity2 = 0
     if num_words == 1:
         complexity2 += raw_freq_metric(candidate)
+    else:
+        complexity2 = 1
     # else: # multiple words case
     #     complexity2 += 1
     #     word = ""
@@ -177,10 +182,9 @@ def rankingmetric(target, candidate, context):
 
     ## DECIMALS ARE DICEY. NEED TO NORMALIZE FOR TIES??
     # complexity += 0 * char_metric(candidate)
-    complexity += 0.85 * lengthmetric(candidate, has_multiple_words=numberofwords > 1)
-    # complexity += 1 * numberofwords
-    # if numberofwords >= 3:
-    #    complexity += 1
+    complexity += 1 * lengthmetric(candidate, numberofwords)
+    if numberofwords >= 3:
+        complexity += 1
     complexity += 1 * frequencymetric(candidate, numberofwords)
     # complexity += 0 * numberofsensesmetric(candidate, numberofwords)
 
@@ -224,7 +228,7 @@ def adjustrankingbyfreq(rankings, candidatesorderedbyfreq):
         # reachedendties = False # used to recognize if we've reached the end of list with no frequency such that ties are valued equally
         for k2, v2 in candidatesorderedbyfreq.items():
             # if v2 == 0:
-            #     reachedendties = True
+                # reachedendties = True
             if k2 == k:
                 if i == 0:
                     rankings[k] = v + 1
@@ -232,7 +236,7 @@ def adjustrankingbyfreq(rankings, candidatesorderedbyfreq):
                     rankings[k] = v + (i * 4.5)
                 break
             # if not reachedendties:
-            #     i += 1
+                # i += 1
             i += 1
     return rankings
 
@@ -294,6 +298,11 @@ def retrieve_data_from_files(sentence_list, candidate_list):
         wiki_frequency_list[row[0]] = (int)(row[1])
     for row in tsvin5:
         numsenseslist[row[0]] = (int)(row[1])
+
+    with open(similarityfile, "r") as f:
+        data = f.readlines()
+
+    
 
 
 def main():
