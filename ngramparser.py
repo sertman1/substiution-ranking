@@ -56,7 +56,7 @@ def write_to_csv(dict):
 
     with open('./assets/onegramcandidates.csv', 'w') as file:
         for key in dict.keys():
-            file.write("%s, %s" % (key, dict[key]))
+            file.write("%s, %s\n" % (key, dict[key]))
 
 def main():
     candidate_list = list()
