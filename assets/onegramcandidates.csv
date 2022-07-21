@@ -1707,6 +1707,7 @@ weaken, 993107
 booming, 990128
 incompetent, 985793
 accuse, 978661
+discerning, 977553
 choke, 975357
 terrifying, 973677
 procure, 973603
@@ -1959,6 +1960,7 @@ conceivably, 341922
 inelastic, 340262
 evaporate, 336109
 cursory, 332132
+forgo, 325428
 shrill, 324527
 approachable, 323028
 untrained, 321473
@@ -2035,6 +2037,7 @@ papyrus, 203572
 thundering, 201606
 surmise, 201587
 legume, 201102
+emanate, 201024
 tardy, 200455
 malleable, 200199
 deflate, 198630
@@ -2385,9 +2388,9 @@ mail carrier, 0
 electronic bulletin, 0
 electronic mail, 0
 the job, 0
-16 ounces , 0
+16 ounces, 0
 sixteen ounces, 0
-11.27 kilograms , 0
+11.27 kilograms, 0
 per ounces, 0
 twelve shillings, 0
 poor treatment, 0
@@ -2409,7 +2412,6 @@ uncrooked, 0
 in a row, 0
 the Victorian period, 0
 a chance, 0
-garden , 0
 sixty feet, 0
 several feet, 0
 work area, 0
@@ -2444,13 +2446,11 @@ be about, 0
 be connected with, 0
 we consider, 0
 proposed by, 0
-emanate , 0
 be not organised, 0
 take place, 0
 spring to mind, 0
 enter my, 0
 occur to one, 0
-arrive , 0
 fall off, 0
 chance upon, 0
 lay off, 0
@@ -2482,19 +2482,16 @@ engage in, 0
 agree to, 0
 inform people, 0
 tell people, 0
-give , 0
 free market, 0
 free thinking, 0
 open minded, 0
 broad minded, 0
 left wing, 0
 easily digested, 0
-pale , 0
 not heavy, 0
 small amounts of, 0
 less serious, 0
 of little weight, 0
-equally , 0
 the same, 0
 of late, 0
 as a result, 0
@@ -2565,18 +2562,15 @@ erupt with laughter, 0
 know as, 0
 describe as, 0
 refer to as, 0
-trailer , 0
 camp trailer, 0
 mobile home, 0
 house trailer, 0
 be fitted with, 0
 have on them, 0
-near , 0
 in detail, 0
 in concert, 0
 in unison, 0
 in tandem, 0
-forgo , 0
 get worse, 0
 set down, 0
 left round, 0
@@ -2646,7 +2640,6 @@ not remotely, 0
 accepting business, 0
 ready for business, 0
 switched on, 0
-discerning , 0
 thought provoking, 0
 far reaching, 0
 deep seated, 0
@@ -2680,13 +2673,11 @@ one might say, 0
 as it were, 0
 in a way, 0
 as we, 0
-about , 0
 or more, 0
 not rough, 0
 nonalcoholic drinks, 0
 layer of earth, 0
 the ground, 0
-constant , 0
 seem to, 0
 occur to, 0
 appear to, 0
@@ -2719,7 +2710,6 @@ become different, 0
 death sentence, 0
 capital punishment, 0
 carrying out, 0
-operation , 0
 putting to death, 0
 the chair, 0
 the death penalty, 0
@@ -2770,7 +2760,6 @@ be accepted by, 0
 get approval from, 0
 meet approval, 0
 move through, 0
-go , 0
 poverty stricken, 0
 low income, 0
 less well off, 0
@@ -2787,7 +2776,6 @@ demonstrate to, 0
 indicate to, 0
 do not appear, 0
 put on, 0
-display , 0
 be revealed, 0
 be seen, 0
 be displayed, 0

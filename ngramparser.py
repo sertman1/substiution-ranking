@@ -17,7 +17,7 @@ def tokenize_candidates(candidates):
         if c != ';' and c != '\n':
             candidate += c
         else:
-            list_of_candidates.append(candidate)
+            list_of_candidates.append(candidate.strip())
             candidate = ""
     list_of_candidates.append(candidate.strip())
     return list_of_candidates

@@ -28,9 +28,9 @@ def tokenizecandidates(candidates):
         if c != ';' and c != '\n':
             candidate += c
         else:
-            listofcandidates.append(candidate)
+            listofcandidates.append(candidate.strip())
             candidate = ""
-    listofcandidates.append(candidate)
+    listofcandidates.append(candidate.strip())
     return listofcandidates
 
 def algorithm(sentence, candidates):
