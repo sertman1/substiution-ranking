@@ -4,16 +4,18 @@ sentencefile = './assets/targetwordtest.tsv'
 candidatefile = './assets/candidatestest.csv'
 frequencyfile = './assets/FrencuenciasEN.csv'
 wikifrequencyfile = './assets/wikifrequencies.csv'
+ngram_file = 'assets/ngramgooglecandidates.csv'
 
 frequencylist = {}
 wiki_frequency_list = {}
+ngram_list = {}
 
 def orderbyfrequency(candidates):
     orderedlist = {}
 
     for candidate in candidates:
         if candidate in frequencylist:
-            orderedlist[candidate] = int(frequencylist[candidate][1])
+            orderedlist[candidate] = ngram_list[candidate]
         else:
             orderedlist[candidate] = 0
 
@@ -67,6 +69,8 @@ def retrieve_data_from_files(sentence_list, candidate_list):
     tsvin3 = csv.reader(tsvin3, delimiter=';')
     tsvin4 = open(wikifrequencyfile, "rt", encoding='utf-8')
     tsvin4 = csv.reader(tsvin4, delimiter=',')
+    tsvin5 = open(ngram_file, "rt", encoding='utf-8')
+    tsvin5 = csv.reader(tsvin5, delimiter=',')
 
     for row in tsvin:
         sentence_list.append(row)
@@ -76,7 +80,8 @@ def retrieve_data_from_files(sentence_list, candidate_list):
         frequencylist[row[1]] = (row[0], row[2]) # relative rank, raw frequency pair
     for row in tsvin4:
         wiki_frequency_list[row[0]] = (int)(row[1])
-
+    for row in tsvin5:
+        ngram_list[row[0]] = (int)(row[1])
 
 def main():
     sentence_list = list()

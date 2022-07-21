@@ -9,11 +9,13 @@ frequencyfile = './assets/FrencuenciasEN.csv'
 wikifrequencyfile = './assets/wikifrequencies.csv'
 numsensesfile = './assets/numberofsenses.csv'
 similarityfile = './assets/relativesimilarities.txt'
+ngram_file = 'assets/ngramgooglecandidates.csv'
 
 
 frequencylist = {}
 wiki_frequency_list = {}
 numsenseslist = {}
+ngram_list = {}
 
 def lengthmetric(candidate, numberofwords):
     # complexity = 0
@@ -203,6 +205,7 @@ def orderbyfrequency(candidates):
     for candidate in candidates:
         if candidate in frequencylist:
             orderedlist[candidate] = int(frequencylist[candidate][1])
+            # orderedlist[candidate] = ngram_list[candidate]
         else:
             orderedlist[candidate] = 0
 
@@ -287,6 +290,8 @@ def retrieve_data_from_files(sentence_list, candidate_list):
     tsvin4 = csv.reader(tsvin4, delimiter=',')
     tsvin5 = open(numsensesfile, "rt", encoding='utf-8')
     tsvin5 = csv.reader(tsvin5, delimiter=',')
+    tsvin6 = open(ngram_file, "rt", encoding='utf-8')
+    tsvin6 = csv.reader(tsvin6, delimiter=',')
 
     for row in tsvin:
         sentence_list.append(row)
@@ -298,10 +303,8 @@ def retrieve_data_from_files(sentence_list, candidate_list):
         wiki_frequency_list[row[0]] = (int)(row[1])
     for row in tsvin5:
         numsenseslist[row[0]] = (int)(row[1])
-
-    with open(similarityfile, "r") as f:
-        data = f.readlines()
-
+    for row in tsvin6:
+        ngram_list[row[0]] = (int)(row[1])
     
 
 
