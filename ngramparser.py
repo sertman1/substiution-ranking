@@ -19,7 +19,7 @@ def tokenize_candidates(candidates):
         else:
             list_of_candidates.append(candidate)
             candidate = ""
-    list_of_candidates.append(candidate)
+    list_of_candidates.append(candidate.strip())
     return list_of_candidates
 
 def process_one_gram_file(hashmap_of_candidates):
