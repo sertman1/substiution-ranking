@@ -2,13 +2,21 @@ import csv
 
 candidate_file = 'assets/candidatestest.csv'
 one_gram_file = 'assets/vocab_cs'
+one_gram_dict = 'assets/ngramgooglecandidates.csv'
+
+hashmap_of_candidates = {}
 
 def retrieve_data_from_files(candidate_list):
     tsvin = open(candidate_file, "rt", encoding='utf-8')   
     tsvin = csv.reader(tsvin, delimiter='\t')
+    tsvin2 = open(one_gram_dict, "rt", encoding='utf-8')
+    tsvin2 = csv.reader(tsvin2, delimiter=',')
 
     for row in tsvin:
       candidate_list.append(row)
+
+    for row in tsvin2:
+      hashmap_of_candidates[row[0]] = (int)(row[1])
 
 def tokenize_candidates(candidates):
     list_of_candidates = list()
@@ -35,6 +43,7 @@ def process_one_gram_file(hashmap_of_candidates):
             one_gram += line[i]
             i += 1
 
+          one_gram = one_gram.lower()
           # only continue if the one_gram is one of the candidates
           if one_gram in hashmap_of_candidates:
             # skip through the white spaces
@@ -45,8 +54,7 @@ def process_one_gram_file(hashmap_of_candidates):
               frequency += line[i]
               i += 1    
 
-            hashmap_of_candidates[one_gram] = int(frequency)
-            print(one_gram)        
+            hashmap_of_candidates[one_gram] += int(frequency)     
 
           line = fp.readline() # advance to loop to next line
 
@@ -54,20 +62,19 @@ def write_to_csv(dict):
     # sort frequencies from highest to lowest
     dict = {k: v for k, v in sorted(dict.items(), key=lambda item: item[1], reverse=True)}
 
-    with open('./assets/onegramcandidates.csv', 'w') as file:
+    with open('assets/ngramgooglecandidates.csv', 'w') as file:
         for key in dict.keys():
             file.write("%s, %s\n" % (key, dict[key]))
 
 def main():
     candidate_list = list()
     retrieve_data_from_files(candidate_list)
-    hashmap_of_candidates = {}
 
-    for i in range(len(candidate_list)):
-      candidates = tokenize_candidates(candidate_list[i])
-      for candidate in candidates:
-        if not candidate in hashmap_of_candidates:
-          hashmap_of_candidates[candidate] = 0
+    # for i in range(len(candidate_list)):
+    #   candidates = tokenize_candidates(candidate_list[i])
+    #   for candidate in candidates:
+    #     if not candidate in hashmap_of_candidates:
+    #       hashmap_of_candidates[candidate] = 0
     
     process_one_gram_file(hashmap_of_candidates)
     write_to_csv(hashmap_of_candidates)
